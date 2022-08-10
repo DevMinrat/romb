@@ -28,21 +28,17 @@ html {
 }
 
 body {
-  font-family: Commissioner, sans-serif;
-  font-weight: 400;
-  font-size: 1.8rem;
-  line-height: 1.5;
-  color: $black;
+  font-family: Ubuntu, sans-serif;
+  font-weight: 300;
+  font-size: 2rem;
+  line-height: 1.2;
+  color: white;
 
-  background-color: white;
+  background-color: #080808;
 
-  @include breakpoint ($sm-bp) {
+  @include breakpoint($sm-bp) {
     font-size: 1.6rem;
   }
-}
-
-main {
-  padding-top: 9.6rem;
 }
 
 img {
@@ -60,6 +56,10 @@ a {
   }
 }
 
+svg {
+  transition: all 0.1s linear;
+}
+
 /* Vendors */
 
 @import "vendor/swiper.scss";
@@ -69,6 +69,11 @@ a {
 @import "blocks/page";
 @import "blocks/container";
 @import "blocks/header";
+@import "blocks/filled-btn";
+
+@import "blocks/intro.scss";
+@import "blocks/video-main.scss";
+@import "blocks/whats.scss";
 
 @import "blocks/footer";
 

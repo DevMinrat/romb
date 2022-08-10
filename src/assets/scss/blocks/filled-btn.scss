@@ -1,0 +1,19 @@
+.filled-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: white;
+
+  background: #ffc400;
+  border: 0.1rem solid #ffc400;
+  border-radius: 5.4rem;
+
+  transition: all 0.1s linear;
+
+  &:hover {
+    color: white;
+
+    background-color: transparent;
+  }
+}

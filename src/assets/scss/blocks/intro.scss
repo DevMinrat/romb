@@ -1,0 +1,68 @@
+.intro {
+  position: relative;
+  overflow: hidden;
+
+  display: flex;
+
+  height: 114.2rem;
+
+  background: url(../images/intro/intro-bg.png) no-repeat;
+  background-size: cover;
+}
+
+.intro__inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  height: 100%;
+}
+
+.intro__content {
+  width: 100%;
+  max-width: 80.3rem;
+}
+
+.intro__title {
+  font-weight: 700;
+  font-size: 6rem;
+  line-height: 129.51%;
+  letter-spacing: -0.035em;
+
+  margin-bottom: 7.8rem;
+}
+
+.intro__subtitle {
+  font-size: 3.6rem;
+
+  margin-bottom: 6.7rem;
+}
+
+.intro__btn {
+  width: 100%;
+  max-width: 26.9rem;
+  height: 9.4rem;
+
+  font-size: 3rem;
+  font-weight: 500;
+  color: #000;
+}
+
+.intro-fighters__model {
+  width: 100%;
+  max-width: 44.1rem;
+
+  position: absolute;
+  left: 45%;
+  bottom: 0;
+  z-index: 5;
+}
+.intro-fighters__human {
+  width: 100%;
+  max-width: 83.4rem;
+
+  position: absolute;
+  right: 0;
+  bottom: -10rem;
+  z-index: 4;
+}

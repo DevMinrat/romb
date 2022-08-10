@@ -1,0 +1,50 @@
+.whats {
+  padding: 15rem 0;
+
+  background: url(../images/whats/whats-bg.png) no-repeat;
+  background-size: cover;
+}
+
+.whats__inner {
+  display: flex;
+  align-items: center;
+}
+
+.whats-img {
+  width: 100%;
+  max-width: 100rem;
+
+  margin-right: 3rem;
+  margin-top: 10rem;
+}
+
+.whats__heading {
+  font-weight: 700;
+  font-size: 6rem;
+  line-height: 1.29;
+  letter-spacing: -0.035em;
+
+  margin-bottom: 9rem;
+
+  span {
+    color: #ff8a00;
+  }
+}
+
+.whats-descr {
+  font-size: 2.4rem;
+
+  margin-bottom: 7rem;
+}
+
+.whats-link {
+  width: 100%;
+  max-width: 26.9rem;
+  height: 7.2rem;
+
+  font-weight: 500;
+  font-size: 2.2rem;
+
+  background: #f08200;
+  border-color: #f08200;
+}
