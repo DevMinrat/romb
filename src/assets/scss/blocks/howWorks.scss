@@ -1,0 +1,219 @@
+.howWorks {
+  padding: 18rem 0;
+
+  background: url(../images/howWorks/howWorks-bg.png) no-repeat;
+  background-size: cover;
+
+  .section-heading {
+    text-align: center;
+
+    margin-bottom: 11rem;
+  }
+}
+
+.howWorks-item {
+  display: flex;
+  align-items: center;
+}
+
+.howWorks-item__num {
+  font-family: "Montserrat";
+  font-weight: 900;
+  font-size: 4.2rem;
+  line-height: 1.2;
+
+  color: $primary;
+
+  margin-bottom: 3rem;
+}
+
+.howWorks-item__heding {
+  font-weight: 700;
+  font-size: 5.2rem;
+  line-height: 1.11;
+  color: white;
+
+  margin-bottom: 6rem;
+}
+
+.howWorks-item__descr {
+  width: 100%;
+  max-width: 66rem;
+
+  li {
+    position: relative;
+
+    font-family: "Open Sans";
+    font-weight: 400;
+    font-size: 2rem;
+    color: white;
+
+    padding-left: 4.4rem;
+
+    &:first-child {
+      font-family: "Ubuntu";
+      font-weight: 300;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.8rem;
+      z-index: 1;
+
+      width: 1.2rem;
+      height: 1.2rem;
+
+      border: 0.15rem solid transparent;
+      border-radius: 50%;
+    }
+  }
+
+  li + li {
+    margin-top: 4rem;
+  }
+}
+
+.hwi-first {
+  position: relative;
+
+  margin-left: 15rem;
+  margin-bottom: 20rem;
+
+  .howWorks-item__heding {
+    width: 100%;
+    max-width: 88rem;
+  }
+
+  .howWorks-item__descr {
+    li::before {
+      border-color: #ff1f00;
+    }
+    li:nth-child(even)::before {
+      background-color: transparent;
+    }
+    li:nth-child(odd)::before {
+      background-color: #ff1f00;
+    }
+  }
+
+  .howWorks-item__img {
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    width: 100%;
+    max-width: 94.6rem;
+  }
+}
+
+.hwi-second {
+  margin-bottom: 8rem;
+
+  .howWorks-item__content {
+    width: 100%;
+    max-width: 66rem;
+  }
+
+  .howWorks-item__descr {
+    li::before {
+      border-color: #f05600;
+    }
+    li:nth-child(even)::before {
+      background-color: transparent;
+    }
+    li:nth-child(odd)::before {
+      background-color: #f05600;
+    }
+  }
+
+  .howWorks-item__img {
+    width: 100%;
+    max-width: 107.7rem;
+  }
+}
+
+.hwi-third {
+  margin-left: 15rem;
+  margin-bottom: 9rem;
+
+  .howWorks-item__content {
+    width: 100%;
+    max-width: 88.3rem;
+  }
+
+  .howWorks-item__heding {
+    width: 100%;
+    max-width: 65.2rem;
+  }
+
+  .howWorks-item__descr {
+    li::before {
+      border-color: #ffc400;
+    }
+    li:nth-child(even)::before {
+      background-color: transparent;
+    }
+    li:nth-child(odd)::before {
+      background-color: #ffc400;
+    }
+  }
+
+  .howWorks-item__img {
+    width: 100%;
+    max-width: 107.7rem;
+  }
+}
+
+.hwi-fourth {
+  margin-bottom: 20rem;
+
+  .howWorks-item__heding {
+    width: 100%;
+    max-width: 73.4rem;
+  }
+
+  .howWorks-item__descr {
+    li::before {
+      border-color: #14fe48;
+    }
+    li:nth-child(even)::before {
+      background-color: transparent;
+    }
+    li:nth-child(odd)::before {
+      background-color: #14fe48;
+    }
+  }
+
+  .howWorks-item__img {
+    width: 100%;
+    max-width: 103.8rem;
+  }
+}
+
+.hwi-fifth {
+  margin-left: 15rem;
+
+  .howWorks-item__heding {
+    width: 100%;
+    max-width: 73.4rem;
+  }
+
+  .howWorks-item__descr {
+    li::before {
+      border-color: #68e1fc;
+    }
+    li:nth-child(even)::before {
+      background-color: transparent;
+    }
+    li:nth-child(odd)::before {
+      background-color: #68e1fc;
+    }
+  }
+
+  .howWorks-item__img {
+    width: 100%;
+    max-width: 82.5rem;
+  }
+}

@@ -1,0 +1,244 @@
+.tournaments {
+  padding: 22rem 5rem;
+
+  background: #141415;
+}
+
+.tournaments__heading {
+  font-weight: 700;
+  font-size: 5.2rem;
+  line-height: 1.11;
+
+  margin-bottom: 12.3rem;
+
+  span {
+    color: #ffb400;
+  }
+}
+
+.tournaments__inner {
+  display: flex;
+  align-items: center;
+}
+
+.tournaments-content {
+  width: 100%;
+  max-width: 71.6rem;
+
+  margin-right: 8rem;
+}
+
+.tournaments-descr {
+  font-size: 2.4rem;
+}
+
+.tournaments-map {
+  position: relative;
+
+  .tournaments-map__img {
+    width: 100%;
+    max-width: 93.7rem;
+  }
+}
+
+.tmap-item {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  max-width: 25.5rem;
+
+  &:nth-child(2n) {
+    .tmap-item__icon-wrapper::after {
+      animation-delay: 0.5s;
+    }
+  }
+  &:nth-child(3n) {
+    .tmap-item__icon-wrapper::after {
+      animation-delay: 1s;
+    }
+  }
+
+  &.tmap-item_1 {
+    left: 12.5rem;
+    top: 20rem;
+  }
+  &.tmap-item_2 {
+    left: 10.5rem;
+    top: 23rem;
+  }
+  &.tmap-item_3 {
+    left: 13.5rem;
+    top: 24rem;
+  }
+  &.tmap-item_4 {
+    left: 23.5rem;
+    top: 18rem;
+  }
+  &.tmap-item_5 {
+    left: 43.5rem;
+    top: 17rem;
+  }
+  &.tmap-item_6 {
+    left: 46rem;
+    top: 19rem;
+  }
+  &.tmap-item_7 {
+    left: 41.5rem;
+    top: 23rem;
+  }
+  &.tmap-item_8 {
+    left: 50.5rem;
+    top: 16rem;
+  }
+  &.tmap-item_9 {
+    left: 50.6rem;
+    top: 12.5rem;
+  }
+  &.tmap-item_10 {
+    left: 51.5rem;
+    top: 25.5rem;
+  }
+  &.tmap-item_11 {
+    left: 54.5rem;
+    top: 30.5rem;
+  }
+  &.tmap-item_12 {
+    left: 59.5rem;
+    top: 18rem;
+  }
+  &.tmap-item_13 {
+    left: 63.5rem;
+    top: 16rem;
+  }
+  &.tmap-item_14 {
+    left: 77rem;
+    top: 13rem;
+  }
+  &.tmap-item_15 {
+    left: 68rem;
+    top: 30rem;
+  }
+  &.tmap-item_16 {
+    left: 71rem;
+    top: 34.5rem;
+  }
+  &.tmap-item_17 {
+    left: 77rem;
+    top: 41rem;
+  }
+  &.tmap-item_18 {
+    left: 83.5rem;
+    top: 16.5rem;
+  }
+  &.tmap-item_19 {
+    left: 88rem;
+    top: 11.5rem;
+  }
+}
+
+.tmap-item__icon-wrapper {
+  &:hover + .tmap-item__content {
+    display: block;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: -1rem;
+    top: -0.6rem;
+
+    width: 4rem;
+    height: 4rem;
+
+    background-color: rgba(48, 69, 255, 0.38);
+    border-radius: 50%;
+
+    animation: fadeBg 1.5s ease-in-out infinite alternate-reverse;
+  }
+
+  &:hover::after {
+    animation-play-state: paused;
+  }
+}
+
+.tmap-item__icon {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 2;
+
+  width: 2rem;
+  height: 2.9rem;
+}
+
+.tmap-item__content {
+  display: none;
+
+  position: absolute;
+  left: -12rem;
+  top: -24.7rem;
+  z-index: 3;
+
+  width: 100%;
+  max-width: 25.5rem;
+
+  padding: 1rem;
+
+  border: 0.25rem solid #ffffff;
+  border-radius: 1.69rem 1.69rem 0 0;
+}
+
+.tmap-item__img {
+  width: 100%;
+  height: auto;
+
+  background: #c4c4c4;
+  border-radius: 1.69rem 1.69rem 0 0;
+}
+
+.tmap-item__info {
+  padding: 1.2rem 1.2rem 1.6rem;
+
+  background-color: #fff;
+}
+
+.tmap-item__sity {
+  display: flex;
+  align-items: center;
+
+  margin-bottom: 1.3rem;
+
+  img {
+    width: 1.7rem;
+    height: 1.7rem;
+
+    margin-right: 0.4rem;
+  }
+
+  p {
+    font-weight: 400;
+    font-size: 1.6rem;
+    color: #000;
+  }
+}
+
+.tmap-item__place,
+.tmap-item__address {
+  font-weight: 400;
+  font-size: 1.2rem;
+  color: #000;
+
+  margin-bottom: 0.7rem;
+  margin-left: 2.1rem;
+}
+
+@keyframes fadeBg {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
