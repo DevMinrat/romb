@@ -34,7 +34,7 @@ body {
   line-height: 1.2;
   color: white;
 
-  background-color: #080808;
+  background-color: #141415;
 
   @include breakpoint($sm-bp) {
     font-size: 1.6rem;
@@ -77,6 +77,7 @@ svg {
 @import "blocks/whats.scss";
 @import "blocks/howWorks.scss";
 @import "blocks/tournaments.scss";
+@import "blocks/avatar.scss";
 
 @import "blocks/footer";
 

@@ -19,3 +19,14 @@ let videoMainSlider = new Swiper(".video-main__slider", {
   //     },
   //   },
 });
+
+let avatarSlider = new Swiper(".avatar-slider", {
+  slidesPerView: 1,
+  spaceBetween: 20,
+  effect: "fade",
+  crossFade: true,
+  navigation: {
+    nextEl: ".slider-btn-next",
+    prevEl: ".slider-btn-prev",
+  },
+});
