@@ -63,6 +63,7 @@ svg {
 /* Vendors */
 
 @import "vendor/swiper.scss";
+@import "vendor/threesixty.scss";
 
 /* Blocks */
 
@@ -78,6 +79,8 @@ svg {
 @import "blocks/howWorks.scss";
 @import "blocks/tournaments.scss";
 @import "blocks/avatar.scss";
+@import "blocks/equip.scss";
+@import "blocks/skills.scss";
 
 @import "blocks/footer";
 

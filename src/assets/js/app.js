@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
   //= ../../../node_modules/swiper/swiper-bundle.js
+  //= ../../../node_modules/threesixty-slider/dist/threesixty.min.js
   //= components/
 
   const header = document.querySelector(".header");

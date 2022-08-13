@@ -1,0 +1,57 @@
+.equip {
+  padding: 15rem 0 22rem;
+
+  background: url(../images/equipment/equip-bg.png) no-repeat;
+  background-size: cover;
+}
+
+.equip__inner {
+  display: flex;
+  align-items: flex-start;
+}
+
+.equip-info {
+  width: 100%;
+  max-width: 65.7rem;
+
+  margin-right: 18rem;
+}
+
+.equip-content {
+  display: grid;
+  grid-template-columns: repeat(2, 42rem);
+  gap: 8rem 18rem;
+}
+
+.equip__heading {
+  margin-bottom: 7.6rem;
+}
+
+.equip-item__slider {
+  position: relative;
+
+  width: 100%;
+  max-width: 25rem;
+
+  margin-bottom: 0.8rem;
+
+  .threesixty-icon360 {
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 44;
+
+    width: 100%;
+    max-width: 3rem;
+    height: auto;
+  }
+}
+
+.equip-item__name {
+  font-weight: 700;
+  font-size: 3.6rem;
+  line-height: 1.11;
+  color: $primary;
+
+  margin-bottom: 4rem;
+}
