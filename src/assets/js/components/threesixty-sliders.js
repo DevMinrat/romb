@@ -62,11 +62,11 @@ $(document).ready(function () {
   var three60Skillsighter = $(".skills-fighter").ThreeSixty({
     totalFrames: 36,
     endFrame: 36,
-    currentFrame: 25,
+    currentFrame: 1,
     imgList: ".threesixty_images",
     progress: ".spinner",
     imagePath: "assets/images/skills/fighter/",
-    filePrefix: "",
+    filePrefix: "sf-",
     ext: ".png",
     height: 810,
     width: 810,

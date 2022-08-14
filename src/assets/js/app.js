@@ -23,4 +23,21 @@ document.addEventListener("DOMContentLoaded", () => {
 
     scrollPrev = scrolled;
   });
+
+  // progress bars
+
+  const chooseItems = document.querySelectorAll(".choose-item");
+
+  function animateBars(bar) {
+    const progressValue = bar.getAttribute("data-progress-value");
+
+    bar.querySelector(".filled_bar").style.width = `${progressValue}%`;
+  }
+
+  if (chooseItems.length > 0) {
+    let firstItemBars = chooseItems[0].querySelectorAll(".ci-data__item-progress");
+    firstItemBars.forEach((bar) => {
+      animateBars(bar);
+    });
+  }
 });
