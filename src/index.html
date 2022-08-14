@@ -23,16 +23,16 @@ title: Главная страница
             <div class="video-main__slider">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                        <!-- <iframe src="https://www.youtube.com/embed/r3pwloKMRwM" title="YouTube video player"
+                        <iframe src="https://www.youtube.com/embed/r3pwloKMRwM" title="YouTube video player"
                             frameborder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen></iframe> -->
+                            allowfullscreen></iframe>
                     </div>
                     <div class="swiper-slide">
-                        <!-- <iframe src="https://www.youtube.com/embed/PpjdTwQwWWY" title="YouTube video player"
+                        <iframe src="https://www.youtube.com/embed/PpjdTwQwWWY" title="YouTube video player"
                             frameborder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen></iframe> -->
+                            allowfullscreen></iframe>
                     </div>
                 </div>
                 <div class="video-main__navs">
@@ -925,14 +925,28 @@ title: Главная страница
     <div class="container">
         <div class="tokens__inner">
             <div class="tokens__header">
-                <h2 class="price-heading section-heading">TOKEN ALLOCATION</h2>
-                <p class="price__header-descr">$ROMB token is the native token of ROMB GAME and is used for in-game
+                <h2 class="tokens-heading section-heading">TOKEN ALLOCATION</h2>
+                <p class="tokens__header-descr">$ROMB token is the native token of ROMB GAME and is used for in-game
                     swapping, staking and farming. There will be a total of 100.000.000 ROMB, allocated as follows</p>
             </div>
             <div class="tokens__charts">
                 <div class="tokens-chart">
                     <h3 class="tokens-chart__header">Initial Token Distribution</h3>
-                    
+                    <div class="tokens-chart__wrapper">
+                        <div class="tokens-chart__chart-wrapper">
+                            <canvas id="chart-initial"></canvas>
+                        </div>
+                        <div class="chart-legend" id="legend-initial"></div>
+                    </div>
+                </div>
+                <div class="tokens-chart tokens-chart--right">
+                    <h3 class="tokens-chart__header">Sale Proceed Allocation</h3>
+                    <div class="tokens-chart__wrapper">
+                        <div class="tokens-chart__chart-wrapper">
+                            <canvas id="chart-sale"></canvas>
+                        </div>
+                        <div class="chart-legend" id="legend-sale"></div>
+                    </div>
                 </div>
             </div>
         </div>

@@ -1,0 +1,90 @@
+.tokens {
+  padding: 13rem 0 10rem;
+}
+
+.tokens__header {
+  width: 100%;
+  max-width: 106rem;
+
+  margin: 0 auto 9rem;
+}
+
+.tokens-heading {
+  text-align: center;
+
+  margin-bottom: 7rem;
+}
+
+.tokens__header-descr {
+  font-size: 2.6rem;
+  text-align: center;
+}
+
+.tokens__charts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem 10rem;
+}
+
+.tokens-chart--right {
+  .tokens-chart__header {
+    text-align: right;
+  }
+
+  .tokens-chart__wrapper {
+    flex-direction: row-reverse;
+
+    .chart-legend {
+      margin-left: 0;
+    }
+  }
+}
+
+.tokens-chart__header {
+  font-weight: 700;
+  font-size: 4.2rem;
+  line-height: 1.11;
+  color: $primary;
+  text-align: left;
+
+  margin-bottom: 10rem;
+}
+
+.tokens-chart__wrapper {
+  display: flex;
+  align-items: flex-start;
+}
+
+.tokens-chart__chart-wrapper {
+  width: 56rem;
+  height: 56rem;
+}
+
+.chart-legend {
+  width: 100%;
+  max-width: 16rem;
+
+  margin-left: 4rem;
+  margin-top: 10rem;
+
+  span {
+    width: 100%;
+    max-width: 1.3rem;
+    height: 2rem;
+
+    clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+
+    margin-right: 1.7rem;
+  }
+
+  li {
+    display: flex;
+    align-items: center;
+
+    font-size: 1.6rem;
+  }
+
+  li + li {
+    margin-top: 1.8rem;
+  }
+}
