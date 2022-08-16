@@ -1,0 +1,91 @@
+.launching-timer {
+  padding: 11rem 0 13.5rem;
+
+  background: url(../images/launch-timer/launch-timer-bg.png) no-repeat;
+  background-size: cover;
+}
+
+.launching-timer__heading {
+  font-weight: 700;
+  font-size: 5.2rem;
+  color: $primary;
+  text-align: center;
+
+  margin-bottom: 12rem;
+}
+
+.launching-timer__content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 12rem;
+}
+
+.launching-timer__content-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  & + & {
+    margin-left: 4rem;
+  }
+
+  &:not(:last-child) {
+    .lt-item__num::after {
+      content: ":";
+      font-size: 15rem;
+      font-weight: 700;
+
+      padding-left: 4rem;
+    }
+
+    .lt-item__prop {
+      margin-right: 7.5rem;
+    }
+  }
+}
+
+.lt-item__num {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  font-weight: 700;
+  font-size: 15rem;
+  line-height: 1.11;
+
+  margin-bottom: 4rem;
+}
+
+.lt-item__prop {
+  font-size: 2.4rem;
+  text-transform: uppercase;
+}
+
+.launching-timer__btns {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 100%;
+  max-width: 72rem;
+
+  margin: 0 auto;
+}
+
+.launching-timer__link {
+  width: 100%;
+  max-width: 27rem;
+  height: 7.2rem;
+
+  &.filled-btn {
+    background-color: #f08200;
+    border-color: #f08200;
+
+    &:hover {
+      background-color: transparent;
+    }
+  }
+}
