@@ -49,9 +49,21 @@ let chooseSlider = new Swiper(".choose-slider", {
 });
 
 chooseSlider.on("slideChange", function (e) {
-  let currentProgressBars = e.slides[e.activeIndex].querySelectorAll(".ci-data__item-progress");
+  let currentProgressBars = e.slides[e.activeIndex].querySelectorAll(
+    ".ci-data__item-progress"
+  );
 
   currentProgressBars.forEach((el) => {
     animateBars(el);
   });
+});
+
+let teamSlider = new Swiper(".team-slider", {
+  slidesPerView: "auto",
+  spaceBetween: 100,
+
+  navigation: {
+    nextEl: ".slider-btn-next",
+    prevEl: ".slider-btn-prev",
+  },
 });
