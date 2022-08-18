@@ -8,18 +8,6 @@
 
 .roadmap__inner {
   position: relative;
-
-  &::before {
-    content: "";
-    position: absolute;
-    left: 5.65rem;
-    top: 0rem;
-
-    height: 100%;
-    width: 0.3rem;
-
-    background-color: #9df656;
-  }
 }
 
 .roadmap-header {
@@ -41,8 +29,53 @@
   display: flex;
   align-items: flex-start;
 
+  position: relative;
+
+  &:not(:last-child):before {
+    content: "";
+    position: absolute;
+    left: 5.65rem;
+    top: 0;
+
+    height: 100%;
+    width: 0.3rem;
+
+    background-color: #9df656;
+  }
+
+  &:nth-last-child(2)::before {
+    height: 26rem;
+    top: 0;
+    z-index: 2;
+    background-color: #9df656;
+  }
+  &:nth-last-child(2)::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 5.65rem;
+    z-index: 1;
+
+    height: 100%;
+    width: 0.3rem;
+
+    background-color: #eebf26;
+  }
+
+  &:last-child:before {
+    content: "";
+    position: absolute;
+    left: 5.65rem;
+    top: 0rem;
+
+    height: 26rem;
+    width: 0.3rem;
+
+    background-color: #eebf26;
+  }
+
   & + & {
-    margin-top: 26rem;
+    padding-top: 26rem;
   }
 
   &.done {
@@ -93,7 +126,7 @@
 
 .roadmap-item__point-wrapper {
   width: 11.3rem;
-  z-index: 1;
+  z-index: 3;
 
   padding: 1.8rem 0;
   margin-right: 7.4rem;
@@ -118,6 +151,8 @@
 }
 
 .roadmap-item__content {
+  position: relative;
+
   width: 100%;
   max-width: 52.5rem;
 
@@ -150,4 +185,16 @@
 }
 .roadmap-item__descr {
   font-size: 1.8rem;
+}
+
+.roadmap-item__triangle {
+  position: absolute;
+  top: 5.65rem;
+  left: -2.4rem;
+
+  width: 0;
+  height: 0;
+  border-top: 2rem solid transparent;
+  border-right: 2.5rem solid #eeeeee;
+  border-bottom: 2rem solid transparent;
 }
