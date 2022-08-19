@@ -1,3 +1,7 @@
+.faq {
+  padding: 9rem 0 10rem;
+}
+
 .faq__header {
   width: 100%;
   max-width: 107.5rem;
@@ -14,4 +18,48 @@
 .faq-subheding {
   text-align: center;
   font-size: 2.6rem;
+}
+
+.faq-item {
+  padding: 1.3rem 2.6rem;
+
+  background: linear-gradient(90deg, #f98029 0%, rgba(255, 196, 0, 0.3) 100%);
+  border-radius: 1rem;
+
+  & + & {
+    margin-top: 2.5rem;
+  }
+}
+
+.faq-item__heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  font-weight: 500;
+  font-size: 2.6rem;
+  cursor: pointer;
+
+  svg {
+    width: 6rem;
+    height: 6rem;
+
+    stroke: white;
+  }
+
+  &.active {
+    svg {
+      transform: rotate(-45deg);
+    }
+  }
+}
+
+.faq-item__text-wrapper {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s linear;
+}
+
+.faq-item__text {
+  padding-top: 3rem;
 }

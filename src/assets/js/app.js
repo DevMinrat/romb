@@ -105,4 +105,25 @@ document.addEventListener("DOMContentLoaded", () => {
 
     setClock(".launching-timer__content", deadline);
   }
+
+  // FAQ
+
+  const faqAccTitle = document.querySelectorAll(".faq-item__heading"),
+    faqAccText = document.querySelectorAll(".faq-item__text-wrapper");
+
+  if (faqAccTitle.length > 0) {
+    for (let i = 0; i < faqAccTitle.length; i++) {
+      faqAccTitle[i].addEventListener("click", function () {
+        this.classList.toggle("active");
+
+        let panel = faqAccText[i];
+
+        if (panel.style.maxHeight) {
+          panel.style.maxHeight = null;
+        } else {
+          panel.style.maxHeight = panel.scrollHeight + "px";
+        }
+      });
+    }
+  }
 });
