@@ -9,12 +9,34 @@
     font-size: 7.2rem;
 
     margin-bottom: 11rem;
+
+    @include breakpoint($lg-bp) {
+      font-size: 6rem;
+    }
+
+    @include breakpoint($sm-bp) {
+      font-size: 3rem;
+
+      margin-bottom: 5rem;
+    }
+  }
+
+  @include breakpoint($lg-bp) {
+    padding: 10rem 0;
+  }
+
+  @include breakpoint($sm-bp) {
+    padding: 5rem 0 0;
   }
 }
 
 .howWorks-item {
   display: flex;
   align-items: center;
+
+  @include breakpoint($xl-bp) {
+    flex-direction: column;
+  }
 }
 
 .howWorks-item__num {
@@ -26,6 +48,12 @@
   color: $primary;
 
   margin-bottom: 3rem;
+
+  @include breakpoint($sm-bp) {
+    font-size: 1.8rem;
+
+    margin-bottom: 1rem;
+  }
 }
 
 .howWorks-item__heding {
@@ -35,11 +63,28 @@
   color: white;
 
   margin-bottom: 6rem;
+
+  @include breakpoint($lg-bp) {
+    font-size: 4rem;
+  }
+
+  @include breakpoint($sm-bp) {
+    font-size: 2rem;
+
+    margin-bottom: 4rem;
+  }
 }
 
 .howWorks-item__descr {
   width: 100%;
   max-width: 66rem;
+
+  @include breakpoint($xl-bp) {
+    max-width: unset;
+  }
+  @include breakpoint($sm-bp) {
+    margin-bottom: 2rem;
+  }
 
   li {
     position: relative;
@@ -50,6 +95,12 @@
     color: white;
 
     padding-left: 4.4rem;
+
+    @include breakpoint($sm-bp) {
+      font-size: max(12px, 1.2rem);
+
+      padding-left: 2.4rem;
+    }
 
     &:first-child {
       font-family: "Ubuntu";
@@ -68,11 +119,20 @@
 
       border: 0.15rem solid transparent;
       border-radius: 50%;
+
+      @include breakpoint($sm-bp) {
+        width: 0.6rem;
+        height: 0.6rem;
+      }
     }
   }
 
   li + li {
     margin-top: 4rem;
+
+    @include breakpoint($sm-bp) {
+      margin-top: 2rem;
+    }
   }
 }
 
@@ -82,12 +142,25 @@
   margin-left: 15rem;
   margin-bottom: 20rem;
 
+  @include breakpoint($xl-bp) {
+    margin-left: 0;
+    margin-bottom: 0;
+  }
+
   .howWorks-item__heding {
     width: 100%;
     max-width: 88rem;
+
+    @include breakpoint($xl-bp) {
+      max-width: unset;
+    }
   }
 
   .howWorks-item__descr {
+    @include breakpoint($sm-bp) {
+      margin-bottom: 0;
+    }
+
     li::before {
       border-color: #ff1f00;
     }
@@ -106,15 +179,34 @@
 
     width: 100%;
     max-width: 94.6rem;
+
+    @include breakpoint($xl-bp) {
+      position: static;
+    }
   }
 }
 
 .hwi-second {
   margin-bottom: 8rem;
 
+  @include breakpoint($xl-bp) {
+    flex-direction: column-reverse;
+  }
+
+  @include breakpoint($lg-bp) {
+    margin-bottom: 5rem;
+  }
+  @include breakpoint($sm-bp) {
+    margin-bottom: 3rem;
+  }
+
   .howWorks-item__content {
     width: 100%;
     max-width: 66rem;
+
+    @include breakpoint($xl-bp) {
+      max-width: unset;
+    }
   }
 
   .howWorks-item__descr {
@@ -139,14 +231,33 @@
   margin-left: 15rem;
   margin-bottom: 9rem;
 
+  @include breakpoint($xl-bp) {
+    margin-left: 0;
+  }
+
+  @include breakpoint($lg-bp) {
+    margin-bottom: 5rem;
+  }
+  @include breakpoint($sm-bp) {
+    margin-bottom: 3rem;
+  }
+
   .howWorks-item__content {
     width: 100%;
     max-width: 88.3rem;
+
+    @include breakpoint($xl-bp) {
+      max-width: unset;
+    }
   }
 
   .howWorks-item__heding {
     width: 100%;
     max-width: 65.2rem;
+
+    @include breakpoint($xl-bp) {
+      max-width: unset;
+    }
   }
 
   .howWorks-item__descr {
@@ -170,9 +281,26 @@
 .hwi-fourth {
   margin-bottom: 20rem;
 
+  @include breakpoint($xl-bp) {
+    flex-direction: column-reverse;
+
+    margin-bottom: 10rem;
+  }
+
+  @include breakpoint($lg-bp) {
+    margin-bottom: 5rem;
+  }
+  @include breakpoint($sm-bp) {
+    margin-bottom: 3rem;
+  }
+
   .howWorks-item__heding {
     width: 100%;
     max-width: 73.4rem;
+
+    @include breakpoint($xl-bp) {
+      max-width: unset;
+    }
   }
 
   .howWorks-item__descr {
@@ -196,9 +324,17 @@
 .hwi-fifth {
   margin-left: 15rem;
 
+  @include breakpoint($xl-bp) {
+    margin-left: 0;
+  }
+
   .howWorks-item__heding {
     width: 100%;
     max-width: 73.4rem;
+
+    @include breakpoint($xl-bp) {
+      max-width: unset;
+    }
   }
 
   .howWorks-item__descr {

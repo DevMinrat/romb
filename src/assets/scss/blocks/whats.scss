@@ -1,8 +1,26 @@
 .whats {
   padding: 15rem 0;
 
-  background: url(../images/whats/whats-bg.png) no-repeat;
+  background: #080808 url(../images/whats/whats-bg.png) no-repeat;
   background-size: cover;
+
+  @include breakpoint($xl-bp) {
+    background-position: left bottom -20rem;
+  }
+
+  @include breakpoint($lg-bp) {
+    padding: 10rem 0;
+
+    background-size: auto;
+    background-position: left bottom -10rem;
+  }
+
+  @include breakpoint($sm-bp) {
+    padding: 5rem 0 4rem;
+
+    background-size: 84rem;
+    background-position: left -4rem bottom -6rem;
+  }
 }
 
 .whats__inner {
@@ -20,6 +38,13 @@
 
   margin-right: 3rem;
   margin-top: 10rem;
+
+  @include breakpoint($xl-bp) {
+    margin-right: 0;
+  }
+  @include breakpoint($lg-bp) {
+    margin-top: 5rem;
+  }
 }
 
 .whats__heading {
@@ -33,12 +58,24 @@
   span {
     color: #ff8a00;
   }
+
+  @include breakpoint($sm-bp) {
+    font-size: 3.2rem;
+
+    margin-bottom: 5rem;
+  }
 }
 
 .whats-descr {
   font-size: 2.4rem;
 
   margin-bottom: 7rem;
+
+  @include breakpoint($sm-bp) {
+    font-size: max(12px, 1.2rem);
+
+    margin-bottom: 4rem;
+  }
 }
 
 .whats-link {
@@ -51,4 +88,11 @@
 
   background: #f08200;
   border-color: #f08200;
+
+  @include breakpoint($sm-bp) {
+    max-width: 12.7rem;
+    height: 3.4rem;
+
+    font-size: max(12px, 1.2rem);
+  }
 }
