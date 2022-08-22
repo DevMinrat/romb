@@ -2,6 +2,13 @@
   padding: 10.5rem 6rem;
 
   background: #080808;
+
+  @include breakpoint($lg-bp) {
+    padding: 6.5rem 0;
+  }
+  @include breakpoint($sm-bp) {
+    padding: 8.6rem 0;
+  }
 }
 
 .video-main__slider {
@@ -12,9 +19,31 @@
 
   margin: 0 auto 4rem;
 
+  @include breakpoint($xl-bp) {
+    max-width: 100rem;
+  }
+  @include breakpoint($lg-bp) {
+    max-width: 60rem;
+  }
+  @include breakpoint($sm-bp) {
+    max-width: 30rem;
+
+    margin: 0 auto 3rem;
+  }
+
   .swiper-slide {
     width: 100%;
     height: 76.1rem;
+
+    @include breakpoint($xl-bp) {
+      height: 60rem;
+    }
+    @include breakpoint($lg-bp) {
+      height: 44rem;
+    }
+    @include breakpoint($sm-bp) {
+      height: 17rem;
+    }
 
     iframe {
       width: 100%;
@@ -25,6 +54,13 @@
 
 .video-main__descr {
   font-size: 2.6rem;
+
+  @include breakpoint($lg-bp) {
+    font-size: 2.2rem;
+  }
+  @include breakpoint($sm-bp) {
+    font-size: max(12px, 1.2rem);
+  }
 }
 
 .video-main__navs {
@@ -37,9 +73,17 @@
 
   .slider-btn-prev {
     left: -10.7rem;
+
+    @include breakpoint($sm-bp) {
+      left: -3rem;
+    }
   }
   .slider-btn-next {
     right: -10.7rem;
+
+    @include breakpoint($sm-bp) {
+      right: -3rem;
+    }
   }
 
   svg {
@@ -49,5 +93,18 @@
     stroke: white;
     stroke-width: 5px;
     fill: none;
+
+    @include breakpoint($lg-bp) {
+      width: 2.6rem;
+      height: 4rem;
+
+      stroke-width: 4px;
+    }
+    @include breakpoint($sm-bp) {
+      width: 1.2rem;
+      height: 4.3rem;
+
+      stroke-width: 3px;
+    }
   }
 }

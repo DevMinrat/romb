@@ -10,6 +10,7 @@ html {
   // @include breakpoint($xl-bp) {
   //   font-size: calc(100vw / 1600 * 10);
   // }
+
   @include breakpoint($xl-bp) {
     font-size: calc(100vw / 1385 * 10);
   }
@@ -38,6 +39,15 @@ body {
 
   @include breakpoint($sm-bp) {
     font-size: 1.6rem;
+  }
+}
+
+main {
+  @include breakpoint($lg-bp) {
+    padding-top: 15rem;
+  }
+  @include breakpoint($sm-bp) {
+    padding-top: 10rem;
   }
 }
 

@@ -17,6 +17,14 @@
   margin-right: 18rem;
 }
 
+.skills-content__header {
+  margin-bottom: 15rem;
+}
+
+.equip-info__descr {
+  font-size: max(12px, 2rem);
+}
+
 .equip-content {
   display: grid;
   grid-template-columns: repeat(2, 42rem);
@@ -32,6 +40,7 @@
 
   width: 100%;
   max-width: 25rem;
+  height: 26rem;
 
   margin-bottom: 0.8rem;
 
@@ -71,4 +80,8 @@
   color: $primary;
 
   margin-bottom: 4rem;
+}
+
+.equip-item__descr {
+  font-size: max(12px, 2rem);
 }

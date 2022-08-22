@@ -211,7 +211,7 @@
 
   p {
     font-weight: 400;
-    font-size: 1.6rem;
+    font-size: max(10px, 1.6rem);
     color: #000;
   }
 }
@@ -219,7 +219,7 @@
 .tmap-item__place,
 .tmap-item__address {
   font-weight: 400;
-  font-size: 1.2rem;
+  font-size: max(10px, 1.2rem);
   color: #000;
 
   margin-bottom: 0.7rem;

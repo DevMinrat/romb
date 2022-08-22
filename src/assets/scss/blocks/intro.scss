@@ -8,6 +8,14 @@
 
   background: url(../images/intro/intro-bg.png) no-repeat;
   background-size: cover;
+
+  @include breakpoint($lg-bp) {
+    height: auto;
+  }
+
+  @include breakpoint($sm-bp) {
+    background-position: right bottom;
+  }
 }
 
 .intro__inner {
@@ -16,11 +24,16 @@
   justify-content: center;
 
   height: 100%;
+
+  @include breakpoint($lg-bp) {
+    height: auto;
+  }
 }
 
 .intro__content {
   width: 100%;
   max-width: 80.3rem;
+  z-index: 6;
 }
 
 .intro__title {
@@ -30,12 +43,30 @@
   letter-spacing: -0.035em;
 
   margin-bottom: 7.8rem;
+
+  @include breakpoint($lg-bp) {
+    font-size: 5rem;
+  }
+  @include breakpoint($sm-bp) {
+    font-size: 2.4rem;
+
+    margin-bottom: 3rem;
+  }
 }
 
 .intro__subtitle {
   font-size: 3.6rem;
 
   margin-bottom: 6.7rem;
+
+  @include breakpoint($lg-bp) {
+    font-size: 3rem;
+  }
+  @include breakpoint($sm-bp) {
+    font-size: 1.6rem;
+
+    margin-bottom: 2.6rem;
+  }
 }
 
 .intro__btn {
@@ -46,6 +77,20 @@
   font-size: 3rem;
   font-weight: 500;
   color: #000;
+
+  @include breakpoint($lg-bp) {
+    max-width: 22rem;
+    height: 8rem;
+
+    font-size: 2.6rem;
+  }
+
+  @include breakpoint($sm-bp) {
+    max-width: 10.6rem;
+    height: 3.7rem;
+
+    font-size: 1.2rem;
+  }
 }
 
 .intro-fighters__model {
@@ -56,7 +101,20 @@
   left: 45%;
   bottom: 0;
   z-index: 5;
+
+  @include breakpoint($lg-bp) {
+    bottom: 0;
+
+    max-width: 30rem;
+    left: 20rem;
+  }
+
+  @include breakpoint($sm-bp) {
+    max-width: 17.5rem;
+    left: 3rem;
+  }
 }
+
 .intro-fighters__human {
   width: 100%;
   max-width: 83.4rem;
@@ -65,4 +123,18 @@
   right: 0;
   bottom: -10rem;
   z-index: 4;
+
+  @include breakpoint($lg-bp) {
+    position: relative;
+    bottom: 0;
+
+    max-width: 66rem;
+    right: -15rem;
+  }
+
+  @include breakpoint($sm-bp) {
+    max-width: 36.8rem;
+
+    right: -5rem;
+  }
 }

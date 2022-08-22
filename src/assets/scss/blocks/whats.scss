@@ -8,6 +8,10 @@
 .whats__inner {
   display: flex;
   align-items: center;
+
+  @include breakpoint($xl-bp) {
+    flex-direction: column-reverse;
+  }
 }
 
 .whats-img {

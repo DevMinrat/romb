@@ -71,7 +71,7 @@ $(window).on("load", function () {
       responsive: true,
     });
 
-    $(".equip-content").removeClass("hidden");
+    $(".equip-info").removeClass("hidden");
   }
 
   function initThreeSixtySkillFighter() {
@@ -93,7 +93,7 @@ $(window).on("load", function () {
     $(".skills-slider").removeClass("hidden");
   }
 
-  if (isScrolledIntoView($(".equip-content"))) {
+  if (isScrolledIntoView($(".equip-info"))) {
     initThreeSixtyUniform();
   }
   if (isScrolledIntoView($(".skills-slider"))) {
@@ -102,8 +102,8 @@ $(window).on("load", function () {
 
   window.addEventListener("scroll", () => {
     if (
-      isScrolledIntoView($(".equip-content")) &&
-      $(".equip-content").hasClass("hidden")
+      isScrolledIntoView($(".equip-info")) &&
+      $(".equip-info").hasClass("hidden")
     ) {
       initThreeSixtyUniform();
     }

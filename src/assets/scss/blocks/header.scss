@@ -45,12 +45,16 @@
 .nav-list__item {
   & + & {
     margin-left: 7rem;
+
+    @include breakpoint($xl-bp) {
+      margin-left: 5rem;
+    }
   }
 }
 
 .nav-list__item-link {
   font-weight: 500;
-  font-size: 2rem;
+  font-size: max(12px, 2rem);
   line-height: 1.1;
   color: white;
 
