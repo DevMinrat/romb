@@ -4,6 +4,10 @@
   background: url(../images/howWorks/howWorks-bg.png) no-repeat;
   background-size: cover;
 
+  @include breakpoint($xl-bp) {
+    padding: 18rem 0 5rem;
+  }
+
   .section-heading {
     text-align: center;
     font-size: 7.2rem;

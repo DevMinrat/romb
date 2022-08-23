@@ -3,11 +3,25 @@
 
   background: url(../images/avatar/avatar-bg.png) no-repeat;
   background-size: cover;
+
+  @include breakpoint($xl-bp) {
+    padding: 20rem 0;
+  }
+  @include breakpoint($lg-bp) {
+    padding: 10rem 0;
+  }
+  @include breakpoint($sm-bp) {
+    padding: 7rem 0;
+  }
 }
 
 .avatar__inner {
   display: flex;
   align-items: center;
+
+  @include breakpoint($lg-bp) {
+    flex-direction: column-reverse;
+  }
 }
 
 .avatar-slider {
@@ -18,11 +32,23 @@
 
   margin-right: 5rem;
 
+  @include breakpoint($xl-bp) {
+    margin-right: 1rem;
+  }
+
+  @include breakpoint($sm-bp) {
+    margin-right: 0;
+  }
+
   .swiper-wrapper {
     width: 100%;
     max-width: 56.8rem;
 
     margin: 0 auto;
+
+    @include breakpoint($sm-bp) {
+      max-width: 25rem;
+    }
   }
 }
 
@@ -32,6 +58,11 @@
   height: 60rem;
 
   border: 0.3rem solid #ffffff;
+
+  @include breakpoint($sm-bp) {
+    max-width: 25rem;
+    height: 27rem;
+  }
 
   img {
     width: 100%;
@@ -49,6 +80,10 @@
 
   width: 100%;
 
+  @include breakpoint($sm-bp) {
+    top: 46%;
+  }
+
   svg {
     width: 2.5rem;
     height: 5rem;
@@ -56,18 +91,49 @@
     fill: none;
     stroke: white;
     stroke-width: 2.75px;
+
+    @include breakpoint($sm-bp) {
+      width: 1.2rem;
+      height: 2.5rem;
+
+      stroke-width: 2px;
+    }
   }
 }
 
 .avatar-content {
   width: 100%;
   max-width: 86.5rem;
+
+  @include breakpoint($lg-bp) {
+    margin-bottom: 6rem;
+  }
 }
 
 .avatar-content__heading {
   margin-bottom: 12rem;
+
+  @include breakpoint($xl-bp) {
+    font-size: 4.8rem;
+
+    margin-bottom: 8rem;
+  }
+  @include breakpoint($lg-bp) {
+    font-size: 3.6rem;
+
+    margin-bottom: 4rem;
+  }
+  @include breakpoint($sm-bp) {
+    font-size: 2rem;
+
+    margin-bottom: 2.5rem;
+  }
 }
 
 .avatar-content__descr {
   font-size: max(12px, 2.2rem);
+
+  @include breakpoint($sm-bp) {
+    font-size: max(12px, 1.2rem);
+  }
 }

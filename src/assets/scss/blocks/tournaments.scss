@@ -6,6 +6,9 @@
   @include breakpoint($xl-bp) {
     padding: 15rem 0;
   }
+  @include breakpoint($lg-bp) {
+    padding: 15rem 0 5rem;
+  }
   @include breakpoint($sm-bp) {
     padding: 3rem 0;
   }
@@ -174,7 +177,9 @@
 
   &.right {
     .tmap-item__content {
-      left: -22rem;
+      @include breakpoint($xl-bp) {
+        left: -22rem;
+      }
 
       @include breakpoint($sm-bp) {
         left: -14rem;
@@ -183,7 +188,9 @@
   }
   &.left {
     .tmap-item__content {
-      left: 0;
+      @include breakpoint($xl-bp) {
+        left: 0;
+      }
     }
   }
 }
