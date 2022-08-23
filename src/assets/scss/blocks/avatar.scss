@@ -9,6 +9,8 @@
   }
   @include breakpoint($lg-bp) {
     padding: 10rem 0;
+
+    background-position: right -23rem center;
   }
   @include breakpoint($sm-bp) {
     padding: 7rem 0;

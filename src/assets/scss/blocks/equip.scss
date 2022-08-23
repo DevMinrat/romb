@@ -3,11 +3,22 @@
 
   background: url(../images/equipment/equip-bg.png) no-repeat;
   background-size: cover;
+
+  @include breakpoint($xl-bp) {
+    padding: 10rem 0 6rem;
+  }
+  @include breakpoint($sm-bp) {
+    background-position: left -33rem center;
+  }
 }
 
 .equip__inner {
   display: flex;
   align-items: flex-start;
+
+  @include breakpoint($xl-bp) {
+    flex-direction: column;
+  }
 }
 
 .equip-info {
@@ -15,24 +26,55 @@
   max-width: 65.7rem;
 
   margin-right: 18rem;
-}
 
-.skills-content__header {
-  margin-bottom: 15rem;
+  @include breakpoint($xl-bp) {
+    max-width: unset;
+
+    margin-right: 0;
+    margin-bottom: 6rem;
+  }
 }
 
 .equip-info__descr {
   font-size: max(12px, 2rem);
+
+  @include breakpoint($sm-bp) {
+    font-size: max(12px, 1.2rem);
+  }
 }
 
 .equip-content {
   display: grid;
   grid-template-columns: repeat(2, 42rem);
   gap: 8rem 18rem;
+
+  @include breakpoint($xl-bp) {
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+  }
+
+  @include breakpoint($sm-bp) {
+    grid-template-columns: 1fr;
+    gap: 9rem;
+  }
 }
 
 .equip__heading {
   margin-bottom: 7.6rem;
+
+  @include breakpoint($sm-bp) {
+    font-size: 2.8rem;
+
+    margin-bottom: 2rem;
+  }
+}
+
+.equip-item {
+  @include breakpoint($xl-bp) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .equip-item__slider {
@@ -80,8 +122,21 @@
   color: $primary;
 
   margin-bottom: 4rem;
+
+  @include breakpoint($xl-bp) {
+    order: -1;
+  }
+  @include breakpoint($sm-bp) {
+    font-size: 2.2rem;
+
+    margin-bottom: 3.7rem;
+  }
 }
 
 .equip-item__descr {
   font-size: max(12px, 2rem);
+
+  @include breakpoint($sm-bp) {
+    font-size: max(12px, 1.2rem);
+  }
 }
