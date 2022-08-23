@@ -2,15 +2,40 @@
   padding: 22rem 5rem;
 
   background: #141415;
+
+  @include breakpoint($xl-bp) {
+    padding: 15rem 0;
+  }
+  @include breakpoint($sm-bp) {
+    padding: 3rem 0;
+  }
 }
 
 .tournaments__heading {
   margin-bottom: 12.3rem;
+
+  @include breakpoint($xl-bp) {
+    margin-bottom: 5rem;
+  }
+
+  @include breakpoint($lg-bp) {
+    font-size: 4.4rem;
+  }
+
+  @include breakpoint($sm-bp) {
+    font-size: 2.4rem;
+
+    margin-bottom: 2.5rem;
+  }
 }
 
 .tournaments__inner {
   display: flex;
   align-items: center;
+
+  @include breakpoint($xl-bp) {
+    flex-direction: column;
+  }
 }
 
 .tournaments-content {
@@ -18,10 +43,28 @@
   max-width: 71.6rem;
 
   margin-right: 8rem;
+
+  @include breakpoint($xl-bp) {
+    max-width: unset;
+
+    margin-right: 0;
+    margin-bottom: 8rem;
+  }
+
+  @include breakpoint($sm-bp) {
+    margin-bottom: 4rem;
+  }
 }
 
 .tournaments-descr {
   font-size: 2.4rem;
+
+  @include breakpoint($lg-bp) {
+    font-size: 2.2rem;
+  }
+  @include breakpoint($sm-bp) {
+    font-size: max(12px, 1.2rem);
+  }
 }
 
 .tournaments-map {
@@ -53,80 +96,95 @@
   }
 
   &.tmap-item_1 {
-    left: 12.5rem;
-    top: 20rem;
+    left: 13%;
+    top: 38%;
   }
   &.tmap-item_2 {
-    left: 10.5rem;
-    top: 23rem;
+    left: 11%;
+    top: 44%;
   }
   &.tmap-item_3 {
-    left: 13.5rem;
-    top: 24rem;
+    left: 14%;
+    top: 46%;
   }
   &.tmap-item_4 {
-    left: 23.5rem;
-    top: 18rem;
+    left: 25%;
+    top: 35%;
   }
   &.tmap-item_5 {
-    left: 43.5rem;
-    top: 17rem;
+    left: 46%;
+    top: 33%;
   }
   &.tmap-item_6 {
-    left: 46rem;
-    top: 19rem;
+    left: 49%;
+    top: 38%;
   }
   &.tmap-item_7 {
-    left: 41.5rem;
-    top: 23rem;
+    left: 45%;
+    top: 44%;
   }
   &.tmap-item_8 {
-    left: 50.5rem;
-    top: 16rem;
+    left: 54%;
+    top: 32%;
   }
   &.tmap-item_9 {
-    left: 50.6rem;
-    top: 12.5rem;
+    left: 54%;
+    top: 25%;
   }
   &.tmap-item_10 {
-    left: 51.5rem;
-    top: 25.5rem;
+    left: 55%;
+    top: 49%;
   }
   &.tmap-item_11 {
-    left: 54.5rem;
-    top: 30.5rem;
+    left: 58%;
+    top: 59%;
   }
   &.tmap-item_12 {
-    left: 59.5rem;
-    top: 18rem;
+    left: 64%;
+    top: 35%;
   }
   &.tmap-item_13 {
-    left: 63.5rem;
-    top: 16rem;
+    left: 67%;
+    top: 31%;
   }
   &.tmap-item_14 {
-    left: 77rem;
-    top: 13rem;
+    left: 82%;
+    top: 26%;
   }
   &.tmap-item_15 {
-    left: 68rem;
-    top: 30rem;
+    left: 73%;
+    top: 60%;
   }
   &.tmap-item_16 {
-    left: 71rem;
-    top: 34.5rem;
+    left: 76%;
+    top: 66%;
   }
   &.tmap-item_17 {
-    left: 77rem;
-    top: 41rem;
+    left: 83%;
+    top: 80%;
   }
   &.tmap-item_18 {
-    left: 83.5rem;
-    top: 16.5rem;
+    left: 89%;
+    top: 33%;
   }
   &.tmap-item_19 {
-    left: 88rem;
-    top: 11.5rem;
+    left: 94%;
+    top: 23%;
+  }
+
+  &.right {
+    .tmap-item__content {
+      left: -22rem;
+
+      @include breakpoint($sm-bp) {
+        left: -14rem;
+      }
+    }
+  }
+  &.left {
+    .tmap-item__content {
+      left: 0;
+    }
   }
 }
 
@@ -148,6 +206,10 @@
     border-radius: 50%;
 
     animation: fadeBg 1.5s ease-in-out infinite alternate-reverse;
+
+    @include breakpoint($sm-bp) {
+      display: none;
+    }
   }
 
   &:hover::after {
@@ -163,6 +225,11 @@
 
   width: 2rem;
   height: 2.9rem;
+
+  @include breakpoint($sm-bp) {
+    width: 0.8rem;
+    height: 1.1rem;
+  }
 }
 
 .tmap-item__content {
@@ -170,7 +237,7 @@
 
   position: absolute;
   left: -12rem;
-  top: -24.7rem;
+  top: -26rem;
   z-index: 3;
 
   width: 100%;
@@ -180,6 +247,16 @@
 
   border: 0.25rem solid #ffffff;
   border-radius: 1.69rem 1.69rem 0 0;
+
+  @include breakpoint($sm-bp) {
+    max-width: 15rem;
+    top: -15.5rem;
+    left: -7rem;
+
+    padding: 0.6rem;
+
+    border-radius: 1rem 1rem 0 0;
+  }
 }
 
 .tmap-item__img {
@@ -188,12 +265,20 @@
 
   background: #c4c4c4;
   border-radius: 1.69rem 1.69rem 0 0;
+
+  @include breakpoint($sm-bp) {
+    border-radius: 1rem 1rem 0 0;
+  }
 }
 
 .tmap-item__info {
   padding: 1.2rem 1.2rem 1.6rem;
 
   background-color: #fff;
+
+  @include breakpoint($sm-bp) {
+    padding: 0.7rem 0.7rem 0.9rem;
+  }
 }
 
 .tmap-item__sity {
@@ -202,17 +287,30 @@
 
   margin-bottom: 1.3rem;
 
+  @include breakpoint($sm-bp) {
+    margin-bottom: 0.7rem;
+  }
+
   img {
     width: 1.7rem;
     height: 1.7rem;
 
     margin-right: 0.4rem;
+
+    @include breakpoint($sm-bp) {
+      width: 1.1rem;
+      height: 1rem;
+    }
   }
 
   p {
     font-weight: 400;
     font-size: max(10px, 1.6rem);
     color: #000;
+
+    @include breakpoint($sm-bp) {
+      font-size: max(12px, 1.2rem);
+    }
   }
 }
 
@@ -224,6 +322,13 @@
 
   margin-bottom: 0.7rem;
   margin-left: 2.1rem;
+
+  @include breakpoint($sm-bp) {
+    font-size: max(7px, 0.7rem);
+
+    margin-bottom: 0.4rem;
+    margin-left: 1.3rem;
+  }
 }
 
 @keyframes fadeBg {
