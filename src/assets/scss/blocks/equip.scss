@@ -5,10 +5,10 @@
   background-size: cover;
 
   @include breakpoint($xl-bp) {
-    padding: 10rem 0 6rem;
+    padding: 6rem 0;
   }
   @include breakpoint($sm-bp) {
-    background-position: left -33rem center;
+    background-position: left -60rem center;
   }
 }
 
@@ -27,7 +27,7 @@
 
   margin-right: 18rem;
 
-  @include breakpoint($xl-bp) {
+  @include breakpoint($lg-bp) {
     max-width: unset;
 
     margin-right: 0;

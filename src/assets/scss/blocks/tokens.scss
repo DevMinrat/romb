@@ -3,6 +3,13 @@
 
   background: url(/assets/images/tokens/tokens-bg.png) no-repeat;
   background-size: cover;
+
+  @include breakpoint($xl-bp) {
+    padding: 10rem 0;
+  }
+  @include breakpoint($sm-bp) {
+    padding: 5rem 0;
+  }
 }
 
 .tokens__header {
@@ -10,32 +17,63 @@
   max-width: 106rem;
 
   margin: 0 auto 9rem;
+
+  @include breakpoint($sm-bp) {
+    margin-bottom: 5rem;
+  }
 }
 
 .tokens-heading {
   text-align: center;
 
   margin-bottom: 7rem;
+
+  @include breakpoint($sm-bp) {
+    font-size: 2.4rem;
+
+    margin-bottom: 2.5rem;
+  }
 }
 
 .tokens__header-descr {
   font-size: 2.6rem;
   text-align: center;
+
+  @include breakpoint($sm-bp) {
+    font-size: max(12px, 1.2rem);
+  }
 }
 
 .tokens__charts {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 5rem 10rem;
+
+  @include breakpoint($xl-bp) {
+    gap: 5rem;
+  }
+
+  @include breakpoint($lg-bp) {
+    grid-template-columns: 1fr;
+    gap: 6rem;
+  }
 }
 
 .tokens-chart--right {
   .tokens-chart__header {
     text-align: right;
+
+    @include breakpoint($lg-bp) {
+      text-align: center;
+    }
   }
 
   .tokens-chart__wrapper {
     flex-direction: row-reverse;
+
+    @include breakpoint($lg-bp) {
+      flex-direction: column;
+    }
 
     .chart-legend {
       margin-left: 0;
@@ -51,16 +89,43 @@
   text-align: left;
 
   margin-bottom: 10rem;
+
+  @include breakpoint($lg-bp) {
+    text-align: center;
+
+    margin-bottom: 6rem;
+  }
+
+  @include breakpoint($sm-bp) {
+    font-size: 1.8rem;
+
+    margin-bottom: 2rem;
+  }
 }
 
 .tokens-chart__wrapper {
   display: flex;
   align-items: flex-start;
+
+  @include breakpoint($lg-bp) {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .tokens-chart__chart-wrapper {
   width: 56rem;
   height: 56rem;
+
+  @include breakpoint($xl-bp) {
+    width: 50rem;
+    height: 50rem;
+  }
+
+  @include breakpoint($sm-bp) {
+    width: 26rem;
+    height: 26rem;
+  }
 }
 
 .chart-legend {
@@ -70,14 +135,41 @@
   margin-left: 4rem;
   margin-top: 10rem;
 
+  @include breakpoint($lg-bp) {
+    max-width: 100%;
+
+    margin-left: 0;
+    margin-top: 3rem;
+  }
+
+  ul {
+    @include breakpoint($lg-bp) {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 2rem 8rem;
+    }
+
+    @include breakpoint($sm-bp) {
+      justify-content: flex-start;
+      gap: 2rem 3rem;
+    }
+  }
+
   span {
-    width: 100%;
-    max-width: 1.3rem;
+    width: 1.3rem;
     height: 2rem;
 
     clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
 
     margin-right: 1.7rem;
+
+    @include breakpoint($sm-bp) {
+      width: 0.7rem;
+      height: 1.2rem;
+
+      margin-right: 0.7rem;
+    }
   }
 
   li {
@@ -85,9 +177,19 @@
     align-items: center;
 
     font-size: max(10px, 1.6rem);
+
+    p {
+      @include breakpoint($sm-bp) {
+        font-size: max(12px, 1.2rem);
+      }
+    }
   }
 
   li + li {
     margin-top: 1.8rem;
+
+    @include breakpoint($lg-bp) {
+      margin-top: 0;
+    }
   }
 }
