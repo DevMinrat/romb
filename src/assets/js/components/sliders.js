@@ -66,4 +66,19 @@ let teamSlider = new Swiper(".team-slider", {
     nextEl: ".slider-btn-next",
     prevEl: ".slider-btn-prev",
   },
+
+  breakpoints: {
+    320: {
+      spaceBetween: 30,
+    },
+    921: {
+      spaceBetween: 50,
+    },
+    1111: {
+      spaceBetween: 70,
+    },
+    1581: {
+      spaceBetween: 100,
+    },
+  },
 });

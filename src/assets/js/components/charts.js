@@ -135,9 +135,10 @@ const observer = new IntersectionObserver(
   function (entries) {
     entries.forEach((entry) => {
       if (
-        entry.isIntersecting === true &&
-        entry.target.id === "chart-initial" &&
-        initialWasVisible === false
+        (entry.isIntersecting === true &&
+          entry.target.id === "chart-initial" &&
+          initialWasVisible === false) ||
+        (initialWasVisible === false && window.innerWidth <= 920)
       ) {
         let newData = {
           backgroundColor: backgroundsInitial,
@@ -156,9 +157,10 @@ const observer = new IntersectionObserver(
       }
 
       if (
-        entry.isIntersecting === true &&
-        entry.target.id === "chart-sale" &&
-        saleWasVisible === false
+        (entry.isIntersecting === true &&
+          entry.target.id === "chart-sale" &&
+          saleWasVisible === false) ||
+        (saleWasVisible === false && window.innerWidth <= 920)
       ) {
         let newData = {
           backgroundColor: backgroundsSale,
