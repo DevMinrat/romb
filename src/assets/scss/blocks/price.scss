@@ -2,6 +2,10 @@
   padding: 10rem 0;
 
   background-color: #141415;
+
+  @include breakpoint($sm-bp) {
+    padding: 5rem 0;
+  }
 }
 
 .price__header {
@@ -9,17 +13,31 @@
   max-width: 105rem;
 
   margin: 0 auto 10rem;
+
+  @include breakpoint($sm-bp) {
+    margin-bottom: 6rem;
+  }
 }
 
 .price-heading {
   text-align: center;
 
   margin-bottom: 7rem;
+
+  @include breakpoint($sm-bp) {
+    font-size: 2.4rem;
+
+    margin-bottom: 2rem;
+  }
 }
 
 .price__header-descr {
   font-size: 2.6rem;
   text-align: center;
+
+  @include breakpoint($sm-bp) {
+    font-size: max(12px, 1.2rem);
+  }
 }
 
 .price-tokens {
@@ -27,6 +45,18 @@
   justify-content: center;
 
   margin-bottom: 10rem;
+
+  @include breakpoint($lg-bp) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+  }
+
+  @include breakpoint($sm-bp) {
+    grid-template-columns: 1fr;
+
+    margin-bottom: 5rem;
+  }
 }
 
 .price-tokens__item {
@@ -36,8 +66,19 @@
   padding: 2rem;
   border: 0.1rem solid #ffffff;
 
+  @include breakpoint($lg-bp) {
+    max-width: 40rem;
+
+    margin: 0 auto;
+  }
+
   p {
     font-size: 2.6rem;
+
+    @include breakpoint($sm-bp) {
+      font-weight: 700;
+      font-size: 1.8rem;
+    }
   }
 
   p + p {
@@ -46,12 +87,24 @@
 
   &:not(:first-child) {
     border-left: none;
+
+    @include breakpoint($lg-bp) {
+      border-left: 0.1rem solid #ffffff;
+    }
+
+    @include breakpoint($sm-bp) {
+      border-top: none;
+    }
   }
 }
 
 .price-content {
   display: flex;
   align-items: center;
+
+  @include breakpoint($xl-bp) {
+    flex-direction: column;
+  }
 }
 
 .price-cards {
@@ -59,6 +112,21 @@
   align-items: center;
 
   margin-right: 6rem;
+
+  @include breakpoint($xl-bp) {
+    margin-right: 0;
+    margin-bottom: 5rem;
+  }
+
+  @include breakpoint($lg-bp) {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+
+  @include breakpoint($sm-bp) {
+    gap: 2rem;
+  }
 }
 
 .price-cards__item-header {
@@ -66,6 +134,10 @@
   align-items: center;
 
   margin-bottom: 6rem;
+
+  @include breakpoint($sm-bp) {
+    margin-bottom: 3rem;
+  }
 }
 
 .price-cards__item {
@@ -80,6 +152,10 @@
   color: white;
 
   margin-right: 3rem;
+
+  @include breakpoint($sm-bp) {
+    font-size: 1.6rem;
+  }
 }
 
 .price-cards__item-price {
@@ -90,6 +166,10 @@
   padding-left: 3rem;
 
   border-left: 0.1rem solid #ffc400;
+
+  @include breakpoint($sm-bp) {
+    font-size: 3.8rem;
+  }
 }
 
 .price-cards__item-descr {
@@ -109,8 +189,16 @@
 
   padding: 6rem 5rem;
 
+  @include breakpoint($xl-bp) {
+    padding: 4rem;
+  }
+
   & + & {
     margin-left: 4rem;
+
+    @include breakpoint($lg-bp) {
+      margin-left: 0;
+    }
   }
 }
 
@@ -122,12 +210,36 @@
   max-width: 33.6rem;
   min-height: 28rem;
 
+  @include breakpoint($xl-bp) {
+    flex-direction: row;
+    align-items: center;
+
+    max-width: 100rem;
+    min-height: unset;
+  }
+  @include breakpoint($lg-bp) {
+    flex-direction: column;
+  }
+
   p {
     font-size: 2.6rem;
+
+    @include breakpoint($sm-bp) {
+      font-size: 1.6rem;
+    }
   }
 
   p + p {
     margin-top: 2rem;
+
+    @include breakpoint($xl-bp) {
+      margin-top: 0;
+      margin-left: 3rem;
+    }
+    @include breakpoint($sm-bp) {
+      margin-left: 0;
+      margin-top: 1rem;
+    }
   }
 }
 
@@ -140,4 +252,21 @@
   font-size: 2.2rem;
 
   margin-top: auto;
+
+  @include breakpoint($xl-bp) {
+    margin-top: unset;
+    margin-left: auto;
+  }
+  @include breakpoint($lg-bp) {
+    margin-left: unset;
+    margin-top: 3rem;
+  }
+  @include breakpoint($sm-bp) {
+    margin-top: 2rem;
+
+    max-width: 12.7rem;
+    height: 3.4rem;
+
+    font-size: max(12px, 1.2rem);
+  }
 }

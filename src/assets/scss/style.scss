@@ -46,8 +46,11 @@ main {
   @include breakpoint($lg-bp) {
     padding-top: 15rem;
   }
+  @include breakpoint($lg-bp) {
+    padding-top: 7rem;
+  }
   @include breakpoint($sm-bp) {
-    padding-top: 10rem;
+    padding-top: 5rem;
   }
 }
 

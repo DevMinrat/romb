@@ -9,6 +9,8 @@ document.addEventListener("DOMContentLoaded", () => {
   //= components/threesixty-sliders.js
 
   const header = document.querySelector(".header");
+  const hmBtn = document.querySelector(".burger-menu");
+  const headerContent = document.querySelector(".header__content");
   let scrollPrev = 0;
 
   window.addEventListener("scroll", () => {
@@ -27,6 +29,14 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     scrollPrev = scrolled;
+
+    hmBtn.classList.remove("menu-on");
+    headerContent.classList.remove("active");
+  });
+
+  hmBtn.addEventListener("click", () => {
+    hmBtn.classList.toggle("menu-on");
+    headerContent.classList.toggle("active");
   });
 
   // progress bars

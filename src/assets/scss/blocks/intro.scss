@@ -11,10 +11,13 @@
 
   @include breakpoint($lg-bp) {
     height: auto;
+    padding-top: 10rem;
   }
 
   @include breakpoint($sm-bp) {
     background-position: right bottom;
+
+    padding-top: 5rem;
   }
 }
 

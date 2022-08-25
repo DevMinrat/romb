@@ -1,23 +1,57 @@
 .footer {
   padding: 10rem 0 5rem;
+
+  @include breakpoint($lg-bp) {
+    padding: 5rem 0;
+  }
+  @include breakpoint($sm-bp) {
+    padding: 2rem 0;
+  }
 }
 
 .footer__inner {
-  display: flex;
-  align-items: center;
+  display: grid;
+  grid-template-areas:
+    "fs fn"
+    "fc fn";
+  grid-template-columns: 50rem 58rem;
   justify-content: space-between;
+  gap: 4rem;
+
+  @include breakpoint($lg-bp) {
+    grid-template-areas:
+      "fs"
+      "fn"
+      "fc";
+    grid-template-columns: 1fr;
+    @include breakpoint($sm-bp) {
+      gap: 3rem;
+    }
+  }
 }
 
 .footer-soc {
+  grid-area: fs;
+
   display: flex;
   align-items: center;
 
   margin-bottom: 4.6rem;
+
+  @include breakpoint($lg-bp) {
+    justify-self: center;
+
+    margin-bottom: 0;
+  }
 }
 
 .footer-soc__link {
   & + & {
     margin-left: 3rem;
+
+    @include breakpoint($sm-bp) {
+      margin-left: 2.5rem;
+    }
   }
 
   svg {
@@ -25,6 +59,11 @@
     height: 4.4rem;
 
     stroke: white;
+
+    @include breakpoint($sm-bp) {
+      width: 3rem;
+      height: 3rem;
+    }
   }
 
   &:hover {
@@ -34,8 +73,18 @@
   }
 }
 
+.footer-copy {
+  grid-area: fc;
+}
+
 .footer-copy__text {
   margin-bottom: 1.5rem;
+
+  @include breakpoint($sm-bp) {
+    font-size: max(10px, 1rem);
+
+    margin-bottom: 0.7rem;
+  }
 
   span {
     color: #ffc400;
@@ -44,11 +93,21 @@
 
 .footer-copy__trademarks {
   margin-bottom: 2rem;
+
+  @include breakpoint($sm-bp) {
+    font-size: max(10px, 1rem);
+
+    margin-bottom: 1rem;
+  }
 }
 
 .footer-dev {
   font-weight: 400;
   font-size: 1.4rem;
+
+  @include breakpoint($sm-bp) {
+    font-size: max(10px, 1rem);
+  }
 
   a {
     color: white;
@@ -60,12 +119,25 @@
 }
 
 .footer-nav {
+  grid-area: fn;
+
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1.5rem 13rem;
 
+  @include breakpoint($lg-bp) {
+    gap: 1.5rem;
+    justify-content: space-between;
+
+    margin-bottom: 2rem;
+  }
+
   a {
     color: white;
+
+    @include breakpoint($sm-bp) {
+      font-size: max(12px, 1.2rem);
+    }
 
     &:hover {
       color: $primary;
