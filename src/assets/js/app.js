@@ -7,6 +7,8 @@ document.addEventListener("DOMContentLoaded", () => {
   //= components/sliders.js
   //= components/charts.js
   //= components/threesixty-sliders.js
+  //= components/scroll-lock.js
+  //= components/heroes.js
 
   const header = document.querySelector(".header");
   const hmBtn = document.querySelector(".burger-menu");
@@ -33,6 +35,10 @@ document.addEventListener("DOMContentLoaded", () => {
     hmBtn.classList.remove("menu-on");
     headerContent.classList.remove("active");
   });
+
+  if (document.documentElement.scrollTop <= 20) {
+    header.classList.add("top");
+  }
 
   hmBtn.addEventListener("click", () => {
     hmBtn.classList.toggle("menu-on");
