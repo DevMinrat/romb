@@ -1,15 +1,33 @@
 const heroesSlider = document.querySelector(".heroes-slider");
 const hsItems = document.querySelectorAll(".heroes-item");
-scrollLock.disablePageScroll();
-document.documentElement.style.overflow = "hidden";
 
 function initHeroesSlider() {
-  let hsWidth = $(heroesSlider).width();
+  let hsItemWidth;
+
+  function gethsItemWidth() {
+    if (window.innerWidth >= 500) {
+      hsItemWidth = 20;
+    } else {
+      hsItemWidth = 13;
+    }
+  }
+
+  gethsItemWidth();
+
+  if (window.innerWidth > 920) {
+    scrollLock.disablePageScroll();
+    document.documentElement.style.overflow = "hidden";
+  } else {
+    scrollLock.enablePageScroll();
+    document.documentElement.style.overflow = "";
+  }
+
   const hsItemsCount = hsItems.length;
 
   //   let currentSlide = hsItemsCount >= 3 ? Math.round(hsItemsCount / 2) : 1;
   let currentSlide = 4;
-  let sliderPos = currentSlide > 1 ? (currentSlide * 20 - 20) * -1 : 0;
+  let sliderPos =
+    currentSlide > 1 ? (currentSlide * hsItemWidth - hsItemWidth) * -1 : 0;
 
   heroesSlider.style.transform = `translate3d(${sliderPos}rem, 0px, 0px)`;
 
@@ -19,14 +37,15 @@ function initHeroesSlider() {
 
   let enableScroll = true;
 
-  window.addEventListener("wheel", (e) => {
+  heroesSlider.addEventListener("wheel", (e) => {
+    if (window.innerWidth < 920) return;
     if (!enableScroll) return;
 
     const delta = Math.sign(e.deltaY);
 
     if (delta < 0) {
       if (currentSlide > 1) {
-        sliderPos += 20;
+        sliderPos += hsItemWidth;
         currentSlide -= 1;
         setActiveSlides(currentSlide);
         heroesSlider.style.transform = `translate3d(${sliderPos}rem, 0px, 0px)`;
@@ -34,7 +53,7 @@ function initHeroesSlider() {
     }
     if (delta > 0) {
       if (currentSlide < hsItemsCount) {
-        sliderPos -= 20;
+        sliderPos -= hsItemWidth;
         currentSlide += 1;
         setActiveSlides(currentSlide);
         heroesSlider.style.transform = `translate3d(${sliderPos}rem, 0px, 0px)`;
@@ -46,6 +65,75 @@ function initHeroesSlider() {
     setTimeout(function () {
       enableScroll = true;
     }, 500);
+  });
+
+  window.addEventListener("keyup", (e) => {
+    if (!enableScroll) return;
+
+    if (e.code == "ArrowLeft") {
+      if (currentSlide > 1) {
+        sliderPos += hsItemWidth;
+        currentSlide -= 1;
+        setActiveSlides(currentSlide);
+        heroesSlider.style.transform = `translate3d(${sliderPos}rem, 0px, 0px)`;
+      }
+    }
+    if (e.code == "ArrowRight") {
+      if (currentSlide < hsItemsCount) {
+        sliderPos -= hsItemWidth;
+        currentSlide += 1;
+        setActiveSlides(currentSlide);
+        heroesSlider.style.transform = `translate3d(${sliderPos}rem, 0px, 0px)`;
+      }
+    }
+
+    enableScroll = false;
+
+    setTimeout(function () {
+      enableScroll = true;
+    }, 500);
+  });
+
+  heroesSlider.ondragstart = function () {
+    return false;
+  };
+
+  heroesSlider.addEventListener("touchstart", (e) => {
+    let start = e.changedTouches[0].pageX;
+    let end;
+    let direction;
+
+    function setDirection(e) {
+      end = e.changedTouches[0].pageX;
+
+      let dif = start - end;
+
+      if (start > end && dif >= 60) {
+        if (currentSlide < hsItemsCount) {
+          sliderPos -= hsItemWidth;
+          currentSlide += 1;
+          setActiveSlides(currentSlide);
+          heroesSlider.style.transform = `translate3d(${sliderPos}rem, 0px, 0px)`;
+        }
+      } else if (start < end && dif <= -60) {
+        if (currentSlide > 1) {
+          sliderPos += hsItemWidth;
+          currentSlide -= 1;
+          setActiveSlides(currentSlide);
+          heroesSlider.style.transform = `translate3d(${sliderPos}rem, 0px, 0px)`;
+        }
+      }
+
+      return direction;
+    }
+
+    heroesSlider.addEventListener(
+      "touchend",
+      (e) => {
+        setDirection(e);
+      },
+      { once: true }
+    );
   });
 }
 
@@ -95,4 +183,6 @@ function setActiveSlides(num) {
   }
 }
 
-initHeroesSlider();
+if (heroesSlider) {
+  initHeroesSlider();
+}

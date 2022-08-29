@@ -250,10 +250,19 @@
 
 .choose-item.swiper-slide-active .choose-item__img-wrapper {
   animation: fadeInRight 1s both;
+
+  @include breakpoint($sm-bp) {
+    animation: none;
+  }
 }
 
-.choose-item.swiper-slide-active .choose-item__data {
+.choose-item.swiper-slide-active .ci-data__header,
+.choose-item.swiper-slide-active .ci-data__info {
   animation: fadeInLeft 1s both;
+
+  @include breakpoint($sm-bp) {
+    animation: none;
+  }
 }
 
 @keyframes fadeInRight {
