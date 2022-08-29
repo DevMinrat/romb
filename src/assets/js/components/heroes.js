@@ -135,6 +135,14 @@ function initHeroesSlider() {
       { once: true }
     );
   });
+
+  window.addEventListener("resize", () => {
+    gethsItemWidth();
+    sliderPos =
+      currentSlide > 1 ? (currentSlide * hsItemWidth - hsItemWidth) * -1 : 0;
+    heroesSlider.style.transform = `translate3d(${sliderPos}rem, 0px, 0px)`;
+    setActiveSlides(currentSlide);
+  });
 }
 
 function setSerialNum() {
