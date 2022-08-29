@@ -98,42 +98,62 @@ function initHeroesSlider() {
     return false;
   };
 
+  let startX, startY;
+  let isDown = false;
+  let end;
+  let direction;
+
   heroesSlider.addEventListener("touchstart", (e) => {
-    let start = e.changedTouches[0].pageX;
-    let end;
-    let direction;
+    startX = e.changedTouches[0].pageX;
+    startY = e.changedTouches[0].pageY;
+    isDown = true;
+  });
 
-    function setDirection(e) {
-      end = e.changedTouches[0].pageX;
+  function setDirection(e) {
+    end = e.changedTouches[0].pageX;
 
-      let dif = start - end;
+    let dif = startX - end;
 
-      if (start > end && dif >= 60) {
-        if (currentSlide < hsItemsCount) {
-          sliderPos -= hsItemWidth;
-          currentSlide += 1;
-          setActiveSlides(currentSlide);
-          heroesSlider.style.transform = `translate3d(${sliderPos}rem, 0px, 0px)`;
-        }
-      } else if (start < end && dif <= -60) {
-        if (currentSlide > 1) {
-          sliderPos += hsItemWidth;
-          currentSlide -= 1;
-          setActiveSlides(currentSlide);
-          heroesSlider.style.transform = `translate3d(${sliderPos}rem, 0px, 0px)`;
-        }
+    if (startX > end && dif >= 60) {
+      if (currentSlide < hsItemsCount) {
+        sliderPos -= hsItemWidth;
+        currentSlide += 1;
+        setActiveSlides(currentSlide);
+        heroesSlider.style.transform = `translate3d(${sliderPos}rem, 0px, 0px)`;
       }
-
-      return direction;
+    } else if (startX < end && dif <= -60) {
+      if (currentSlide > 1) {
+        sliderPos += hsItemWidth;
+        currentSlide -= 1;
+        setActiveSlides(currentSlide);
+        heroesSlider.style.transform = `translate3d(${sliderPos}rem, 0px, 0px)`;
+      }
     }
 
-    heroesSlider.addEventListener(
-      "touchend",
-      (e) => {
-        setDirection(e);
-      },
-      { once: true }
-    );
+    return direction;
+  }
+
+  heroesSlider.addEventListener("touchmove", (e) => {
+    if (isDown) {
+      let deltaX = Math.abs(e.changedTouches[0].pageX - startX);
+      let deltaY = Math.abs(e.changedTouches[0].pageY - startY);
+
+      if (deltaX > deltaY) {
+        scrollLock.disablePageScroll();
+        document.documentElement.style.overflow = "hidden";
+        console.log(2);
+      }
+    }
+  });
+
+  heroesSlider.addEventListener("touchend", (e) => {
+    setDirection(e);
+    isDown = false;
+
+    scrollLock.clearQueueScrollLocks();
+    scrollLock.enablePageScroll();
+    document.documentElement.style.overflow = "";
+    console.log(1);
   });
 
   window.addEventListener("resize", () => {
