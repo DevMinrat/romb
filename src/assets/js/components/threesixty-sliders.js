@@ -154,4 +154,22 @@ $(window).on("load", function () {
       }
     });
   }
+
+  if (document.querySelector(".hero-item__slider")) {
+    var three60Hero = $(".hero-slider").ThreeSixty({
+      totalFrames: 36,
+      endFrame: 36,
+      currentFrame: 1,
+      imgList: ".threesixty_images",
+      progress: ".spinner",
+      imagePath: "assets/images/skills/fighter/",
+      filePrefix: "sf-",
+      ext: ".png",
+      height: 540,
+      width: 540,
+      navigation: false,
+      disableSpin: false,
+      responsive: true,
+    });
+  }
 });

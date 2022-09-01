@@ -142,4 +142,15 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     }
   }
+
+  // link to top
+
+  const toTopLink = document.querySelector(".hero-top");
+
+  if (toTopLink) {
+    toTopLink.addEventListener("click", () => {
+      var body = $("html, body");
+      body.stop().animate({ scrollTop: 0 }, 500, "swing");
+    });
+  }
 });

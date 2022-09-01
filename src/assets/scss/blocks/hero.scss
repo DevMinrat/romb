@@ -1,0 +1,211 @@
+.hero {
+  padding-top: 17rem;
+
+  .container {
+    max-width: 159rem;
+  }
+}
+
+.hero-back {
+  display: flex;
+  align-items: center;
+
+  margin-left: 8rem;
+
+  p {
+    font-weight: 300;
+    font-size: 1.6rem;
+    color: white;
+
+    transition: inherit;
+  }
+
+  svg {
+    width: 2.6rem;
+    height: 1rem;
+
+    stroke: white;
+
+    margin-right: 2rem;
+  }
+
+  &:hover {
+    p {
+      color: $primary;
+    }
+
+    svg {
+      stroke: $primary;
+    }
+  }
+}
+
+.hero-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+}
+
+.hero-item__img-wrapper {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  max-width: 80rem;
+  height: 80rem;
+
+  background: radial-gradient(
+    46.73% 46.73% at 50% 50%,
+    rgba(255 221 153 / 40%) 0%,
+    rgba(255, 203, 82, 0) 97.41%
+  );
+
+  .threesixty-icon360 {
+    position: absolute;
+    right: 0;
+    top: 7rem;
+    z-index: 44;
+
+    width: 100%;
+    max-width: 5rem;
+    height: auto;
+
+    @include breakpoint($sm-bp) {
+      max-width: 3.2rem;
+      right: unset;
+      left: 0;
+    }
+  }
+}
+
+.hero-item__img {
+  width: 100%;
+  max-width: 38rem;
+}
+
+.hero-item__apy {
+  position: absolute;
+  left: 65rem;
+  z-index: 1;
+}
+
+.hero-item__apy-perc {
+  font-weight: 500;
+  font-size: 10rem;
+
+  margin-bottom: 1rem;
+}
+
+.hero-item__apy-name {
+  font-weight: 500;
+  font-size: 6rem;
+  color: #ffc400;
+  text-align: center;
+}
+
+.hero-item__info {
+  width: 100%;
+  max-width: 49.6rem;
+}
+
+.hero-item__info-heading {
+  font-weight: 500;
+  font-size: 6rem;
+  text-transform: uppercase;
+
+  margin-bottom: 5rem;
+}
+
+.hero-item__info-descr {
+  font-weight: 300;
+  font-size: 2.4rem;
+
+  span {
+    color: #ffc400;
+  }
+}
+
+.hero-item__slider {
+  width: 100%;
+  max-width: 54rem;
+  height: 54rem;
+
+  @include breakpoint($lg-bp) {
+    max-width: 50rem;
+    margin-bottom: 5rem;
+  }
+
+  @include breakpoint($sm-bp) {
+    max-width: 30rem;
+  }
+}
+
+.hero-item--nfts {
+  .hero-item__info {
+    max-width: 51rem;
+  }
+
+  .hero-item__info-heading {
+    color: #ffc400;
+    margin-bottom: 7rem;
+
+    span {
+      color: white;
+    }
+  }
+}
+
+.hero-item__link {
+  max-width: 27rem;
+  height: 7.2rem;
+
+  background-color: #f08200;
+  border-color: #f08200;
+}
+
+.hero-top {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  width: max-content;
+
+  margin-right: 8rem;
+  margin-left: auto;
+
+  p {
+    font-weight: 300;
+    font-size: 1.6rem;
+    color: white;
+
+    transition: inherit;
+  }
+
+  svg {
+    width: 2.6rem;
+    height: 1rem;
+
+    stroke: white;
+
+    margin-right: 2rem;
+
+    transform: rotate(90deg);
+  }
+
+  &:hover {
+    p {
+      color: $primary;
+    }
+
+    svg {
+      stroke: $primary;
+    }
+  }
+}

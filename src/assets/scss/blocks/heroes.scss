@@ -150,7 +150,7 @@
   height: 17rem;
 
   transition-property: transform;
-  transform: translate3d(0px, 275%, 0px);
+  transform: translate3d(0px, 475%, 0px);
 
   transition: all 0.3s linear;
 
@@ -161,7 +161,6 @@
   @include breakpoint($sm-bp) {
     max-width: 13rem;
 
-    // transform: translate3d(0px, 50%, 0px);
     transform: translate3d(0px, 15rem, 0px);
   }
 
@@ -269,10 +268,11 @@
 
   width: 100%;
   max-width: 14rem;
-  height: 15rem;
+  height: 20rem;
 
   @include breakpoint($lg-bp) {
     max-width: 10rem;
+    height: 15rem;
   }
   @include breakpoint($sm-bp) {
     max-width: 7rem;
@@ -395,8 +395,11 @@
 .heroes-item.slide-next {
   transform: translate3d(0px, 75%, 0px);
 
+  @include breakpoint($lg-bp) {
+    transform: translate3d(0px, 12rem, 0px);
+  }
+
   @include breakpoint($sm-bp) {
-    // transform: translate3d(0px, 50%, 0px);
     transform: translate3d(0px, 8rem, 0px);
   }
 }
@@ -404,6 +407,15 @@
 .heroes-item.slide-before-prev,
 .heroes-item.slide-after-next {
   transform: translate3d(0px, 150%, 0px);
+
+  @include breakpoint($sm-bp) {
+    transform: translate3d(0px, 15rem, 0px);
+  }
+}
+
+.heroes-item.slide-after-next + .heroes-item,
+.heroes-item.slide-until-before-prev {
+  transform: translate3d(0px, 275%, 0px);
 
   @include breakpoint($sm-bp) {
     // transform: translate3d(0px, 100%, 0px);
