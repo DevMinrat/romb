@@ -1,4 +1,6 @@
 .hollow-btn {
+  position: relative;
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -6,7 +8,7 @@
   color: white;
 
   background: transparent;
-  border: 0.2rem solid #f08200;
+  border: none;
   border-radius: 5.4rem;
 
   transition: all 0.1s linear;
@@ -14,7 +16,22 @@
   &:hover {
     color: white;
 
-    background-color: #f08200;
+    .hollow-btn_bg {
+      fill: $primary;
+    }
   }
 }
 
+.hollow-btn_bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+
+  width: 100%;
+  height: 100%;
+
+  fill: transparent;
+  stroke-width: 3px;
+  stroke: $primary;
+}

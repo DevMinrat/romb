@@ -4,10 +4,10 @@
 
   display: flex;
 
-  height: 114.2rem;
+  height: 100vh;
 
-  background: url(../images/intro/intro-bg.png) no-repeat;
-  background-size: cover;
+  // background: url(../images/intro/intro-bg.png) no-repeat;
+  // background-size: cover;
 
   @include breakpoint($lg-bp) {
     height: auto;
@@ -21,7 +21,43 @@
   }
 }
 
+.intro .video-bg {
+  position: absolute;
+  top: 0;
+  left: 14rem;
+  z-index: 1;
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+
+  @include breakpoint($xl-bp) {
+    left: 30rem;
+  }
+  @include breakpoint($lg-bp) {
+    display: none;
+  }
+}
+
+.intro .video-bg_sm {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+
+  display: none;
+
+  @include breakpoint($lg-bp) {
+    display: block;
+  }
+}
+
 .intro__inner {
+  position: relative;
+  z-index: 2;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -35,38 +71,51 @@
 
 .intro__content {
   width: 100%;
-  max-width: 80.3rem;
+  max-width: 108rem;
   z-index: 6;
+
+  margin-top: 12rem;
 }
 
 .intro__title {
-  font-weight: 700;
-  font-size: 6rem;
-  line-height: 129.51%;
-  letter-spacing: -0.035em;
+  font-family: "Russo One";
+  font-weight: 400;
+  font-size: 5rem;
+  line-height: 120%;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: #ffffff;
 
-  margin-bottom: 7.8rem;
+  margin-bottom: 2.4rem;
 
   @include breakpoint($lg-bp) {
-    font-size: 5rem;
+    font-size: 4rem;
   }
   @include breakpoint($sm-bp) {
-    font-size: 2.4rem;
+    font-size: 3.2rem;
 
-    margin-bottom: 3rem;
+    margin-bottom: 1.2rem;
   }
 }
 
 .intro__subtitle {
-  font-size: 3.6rem;
+  width: 100%;
+  max-width: 74.7rem;
 
-  margin-bottom: 6.7rem;
+  font-family: "Montserrat";
+  font-weight: 500;
+  font-size: 2.4rem;
+  line-height: 130%;
+  color: #d9d9d9;
+
+  margin-bottom: 4.4rem;
 
   @include breakpoint($lg-bp) {
     font-size: 3rem;
   }
   @include breakpoint($sm-bp) {
-    font-size: 1.6rem;
+    font-size: max(12px, 1.2rem);
+    font-weight: 300;
 
     margin-bottom: 2.6rem;
   }
@@ -74,12 +123,13 @@
 
 .intro__btn {
   width: 100%;
-  max-width: 26.9rem;
-  height: 9.4rem;
+  max-width: 66.4rem;
+  height: 8rem;
 
   font-size: 3rem;
   font-weight: 500;
-  color: #000;
+  color: #fff;
+  letter-spacing: 0.02em;
 
   @include breakpoint($lg-bp) {
     max-width: 22rem;
@@ -140,4 +190,40 @@
 
     right: -5rem;
   }
+}
+
+.intro-apps {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+
+  margin-top: 24rem;
+}
+
+.intro-apps__item {
+  display: flex;
+  align-items: center;
+
+  width: 100%;
+  max-width: 22rem;
+  height: 6.4rem;
+
+  color: $primary;
+  font-weight: 500;
+  font-size: 2.2rem;
+
+  &:hover {
+    .intro-apps__item-icon {
+      fill: white;
+    }
+  }
+}
+
+.intro-apps__item-icon {
+  width: 3.2rem;
+  height: 3.2rem;
+
+  fill: $primary;
+
+  margin-right: 1.3rem;
 }
