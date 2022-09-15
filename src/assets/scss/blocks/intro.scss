@@ -6,16 +6,20 @@
 
   height: 100vh;
 
-  // background: url(../images/intro/intro-bg.png) no-repeat;
   // background-size: cover;
 
+  background: #010001;
+
   @include breakpoint($lg-bp) {
-    height: auto;
-    padding-top: 10rem;
+    height: calc(100vh - 4rem);
+    padding-top: 6rem;
+
+    background: url(../images/intro/intro-bg.png) no-repeat;
+    background-size: cover;
   }
 
   @include breakpoint($sm-bp) {
-    background-position: right bottom;
+    background: none;
 
     padding-top: 5rem;
   }
@@ -23,8 +27,8 @@
 
 .intro .video-bg {
   position: absolute;
-  top: 0;
-  left: 14rem;
+  top: 10rem;
+  left: 0;
   z-index: 1;
   width: 100%;
   height: 100vh;
@@ -49,7 +53,7 @@
 
   display: none;
 
-  @include breakpoint($lg-bp) {
+  @include breakpoint($sm-bp) {
     display: block;
   }
 }
@@ -75,6 +79,10 @@
   z-index: 6;
 
   margin-top: 12rem;
+
+  @include breakpoint($lg-bp) {
+    margin-top: 0;
+  }
 }
 
 .intro__title {
@@ -82,7 +90,7 @@
   font-weight: 400;
   font-size: 5rem;
   line-height: 120%;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
   color: #ffffff;
 
@@ -92,9 +100,24 @@
     font-size: 4rem;
   }
   @include breakpoint($sm-bp) {
-    font-size: 3.2rem;
+    font-size: 2.6rem;
 
     margin-bottom: 1.2rem;
+  }
+
+  span {
+    @include breakpoint($sm-bp) {
+      display: block;
+      text-align: right;
+
+      &:first-child {
+        color: #85837e;
+        margin-bottom: 1.3rem;
+      }
+      &:last-child {
+        color: #ffb400;
+      }
+    }
   }
 }
 
@@ -111,17 +134,20 @@
   margin-bottom: 4.4rem;
 
   @include breakpoint($lg-bp) {
-    font-size: 3rem;
+    font-size: 2.6rem;
   }
   @include breakpoint($sm-bp) {
     font-size: max(12px, 1.2rem);
-    font-weight: 300;
+    font-weight: 400;
 
-    margin-bottom: 2.6rem;
+    margin-bottom: 3.8rem;
   }
 }
 
 .intro__btn {
+  position: relative;
+  overflow-x: hidden;
+
   width: 100%;
   max-width: 66.4rem;
   height: 8rem;
@@ -130,74 +156,126 @@
   font-weight: 500;
   color: #fff;
   letter-spacing: 0.02em;
+  text-transform: uppercase;
+
+  border-radius: 0;
+
+  clip-path: polygon(4.7% 0, 100% 0%, 95.3% 100%, 0 100%);
 
   @include breakpoint($lg-bp) {
+    max-width: 41.7rem;
+    height: 5rem;
+    font-size: 1.8rem;
+  }
+
+  @include breakpoint($sm-bp) {
     max-width: 22rem;
-    height: 8rem;
+    height: 4.8rem;
 
-    font-size: 2.6rem;
+    font-size: max(12px, 1.2rem);
+    text-transform: none;
   }
 
-  @include breakpoint($sm-bp) {
-    max-width: 10.6rem;
-    height: 3.7rem;
-
-    font-size: 1.2rem;
-  }
-}
-
-.intro-fighters__model {
-  width: 100%;
-  max-width: 44.1rem;
-
-  position: absolute;
-  left: 45%;
-  bottom: 0;
-  z-index: 5;
-
-  @include breakpoint($lg-bp) {
-    bottom: 0;
-
-    max-width: 30rem;
-    left: 20rem;
+  &:hover {
+    svg {
+      fill: none;
+    }
   }
 
-  @include breakpoint($sm-bp) {
-    max-width: 17.5rem;
-    left: 3rem;
+  .flare {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 8rem;
+    transform: skewX(-25deg);
+    animation: flareAnimation;
+    left: -200%;
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.1),
+      rgba(255, 255, 255, 0.4)
+    );
+    animation: flareAnimation 3s infinite linear;
+
+    @include breakpoint($sm-bp) {
+      transform: skewX(-10deg);
+    }
   }
 }
 
-.intro-fighters__human {
-  width: 100%;
-  max-width: 83.4rem;
+@keyframes flareAnimation {
+  0% {
+    left: -200%;
+  }
+  45% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0;
+  }
+  100% {
+    left: 200%;
+  }
+}
+
+.filled-btn_bg {
+  @include breakpoint($sm-bp) {
+    display: none;
+  }
+}
+
+.filled-btn_bg-sm {
+  display: none;
 
   position: absolute;
-  right: 0;
-  bottom: -10rem;
-  z-index: 4;
-
-  @include breakpoint($lg-bp) {
-    position: relative;
-    bottom: 0;
-
-    max-width: 66rem;
-    right: -15rem;
-  }
+  left: 0;
+  top: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  fill: #ff8a00;
+  stroke: #ff8a00;
+  stroke-width: 1px;
 
   @include breakpoint($sm-bp) {
-    max-width: 36.8rem;
-
-    right: -5rem;
+    display: block;
   }
 }
 
 .intro-apps {
+  margin-top: 24rem;
+
+  @include breakpoint($lg-bp) {
+    margin-top: 15rem;
+    margin-bottom: 1.7rem;
+  }
+}
+
+.intro-apps__descr {
+  display: none;
+
+  @include breakpoint($lg-bp) {
+    display: block;
+
+    font-size: 1.6rem;
+    color: #787672;
+    font-weight: 600;
+
+    margin-bottom: 1.2rem;
+  }
+
+  @include breakpoint($sm-bp) {
+    font-size: max(12px, 1.2rem);
+  }
+}
+
+.intro-apps__content {
   display: flex;
   align-items: center;
   gap: 1.6rem;
-
-  margin-top: 24rem;
 }
 
 .intro-apps__item {
@@ -211,6 +289,12 @@
   color: $primary;
   font-weight: 500;
   font-size: 2.2rem;
+
+  @include breakpoint($sm-bp) {
+    height: 4rem;
+
+    font-size: max(12px, 1.2rem);
+  }
 
   &:hover {
     .intro-apps__item-icon {
@@ -226,4 +310,37 @@
   fill: $primary;
 
   margin-right: 1.3rem;
+
+  @include breakpoint($sm-bp) {
+    width: 2rem;
+    height: 2rem;
+
+    margin-right: 0.4rem;
+  }
+}
+
+.intro__arrow-down {
+  display: none;
+
+  width: 2.6rem;
+  height: 1rem;
+
+  stroke: white;
+
+  transform: rotate(-90deg);
+
+  @include breakpoint($lg-bp) {
+    display: block;
+
+    animation: moveArrow 1s linear infinite alternate;
+  }
+}
+
+@keyframes moveArrow {
+  0% {
+    transform: translateY(0rem) rotate(-90deg);
+  }
+  100% {
+    transform: translateY(1rem) rotate(-90deg);
+  }
 }
