@@ -105,16 +105,28 @@
 }
 
 .nav-list__item {
-  & + & {
-    margin-left: 7rem;
+  position: relative;
 
-    @include breakpoint($xl-bp) {
-      margin-left: 5rem;
-    }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 13rem;
+  height: 4rem;
+
+  padding: 0 2rem;
+
+  & + & {
+    margin-left: 1rem;
+
     @include breakpoint($lg-bp) {
       margin-left: 0;
       margin-top: 2rem;
     }
+  }
+
+  & .hollow-btn_bg {
+    display: none;
   }
 }
 
@@ -124,12 +136,20 @@
   line-height: 1.1;
   color: white;
 
+  &.active {
+    color: #ff8a00;
+
+    & + .hollow-btn_bg {
+      display: block;
+    }
+  }
+
   @include breakpoint($sm-bp) {
     font-size: 1.8rem;
   }
 
   &:hover {
-    color: #ffc400;
+    color: #ff8a00;
   }
 }
 
@@ -155,7 +175,7 @@
 
   &:hover {
     svg {
-      stroke: #ffc400;
+      stroke: #ff8a00;
     }
   }
 

@@ -3,10 +3,11 @@ layout: default
 title: Главная страница
 ---
 
-<section class="intro">
-    <video class="video-bg" src="assets/images/intro/intro-video.mp4" type="video/mp4" autoplay muted loop></video>
-    <video class="video-bg_sm" src="assets/images/intro/intro-video-sm.mp4" type="video/mp4" autoplay muted
-        loop></video>
+<section class="intro nav-section">
+    <video class="video-bg" src="assets/images/intro/intro-video.mp4" type="video/mp4" autoplay muted loop
+        playsinline></video>
+    <video class="video-bg_sm" src="assets/images/intro/intro-video-sm.mp4" type="video/mp4" autoplay muted loop
+        playsinline></video>
     <div class="container">
         <div class="intro__inner">
             <div class="intro__content">
@@ -65,11 +66,40 @@ title: Главная страница
                             Windows
                         </a>
                     </div>
+                    <svg class="intro__arrow-down">
+                        <use href="#arrow"></use>
+                    </svg>
                 </div>
-
-                <svg class="intro__arrow-down">
-                    <use href="#arrow"></use>
-                </svg>
+            </div>
+            <div class="intro-wallets">
+                <div class="intro-wallets__item">
+                    <svg class="romb-icon">
+                        <use href="#romb-icon"></use>
+                    </svg>
+                    <p>$THG :</p>
+                    <p>BEP20</p>
+                    <p>0x9fd87aefe02441b123c3c32466cd9db4c578618f</p>
+                    <svg class="copy-icon">
+                        <use href="#copy"></use>
+                    </svg>
+                </div>
+                <div class="intro-wallets__item">
+                    <svg class="romb-icon">
+                        <use href="#romb-icon"></use>
+                    </svg>
+                    <p>$THG :</p>
+                    <p>BEP20</p>
+                    <p>0x9fd87aefe02441b123c3c32466cd9db4c578618f</p>
+                    <svg class="copy-icon">
+                        <use href="#copy"></use>
+                    </svg>
+                </div>
+                <a class="intro-apps__item hollow-btn" href="#">
+                    <svg class="hollow-btn_bg">
+                        <use href="#prlm-sm"></use>
+                    </svg>
+                    Trade Now
+                </a>
             </div>
         </div>
     </div>
@@ -1052,7 +1082,7 @@ title: Главная страница
     </div>
 </section>
 
-<section class="tokens">
+<section class="tokens nav-section">
     <div class="container">
         <div class="tokens__inner">
             <div class="tokens__header">
@@ -1190,7 +1220,7 @@ title: Главная страница
     </div>
 </section>
 
-<section class="roadmap">
+<section class="roadmap nav-section">
     <div class="container">
         <div class="roadmap-header">
             <h2 class="roadmap-heading section-heading">Дорожная карта</h2>
@@ -1253,7 +1283,7 @@ title: Главная страница
     </div>
 </section>
 
-<section class="team">
+<section class="team nav-section">
     <div class="container">
         <div class="team__header">
             <h2 class="team-heading section-heading">Наша команда</h2>

@@ -45,6 +45,28 @@ document.addEventListener("DOMContentLoaded", () => {
     headerContent.classList.toggle("active");
   });
 
+  const navLinks = document.querySelectorAll(".nav-list__item-link"),
+    navSections = document.querySelectorAll(".nav-section");
+
+  window.addEventListener("scroll", () => {
+    let scrollDistance = window.scrollY;
+
+    navSections.forEach((el, index) => {
+      if (scrollDistance >= el.offsetTop - 250) {
+        navLinks.forEach((elem) => {
+          if (elem.classList.contains("active")) {
+            elem.classList.remove("active");
+          }
+        });
+
+        navLinks[index].classList.add("active");
+      } else if (scrollDistance < 300) {
+        navLinks[index].classList.remove("active");
+      }
+    });
+  });
+  navLinks[0].classList.add("active");
+
   // progress bars
 
   const chooseItems = document.querySelectorAll(".choose-item");
