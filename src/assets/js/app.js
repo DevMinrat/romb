@@ -45,27 +45,60 @@ document.addEventListener("DOMContentLoaded", () => {
     headerContent.classList.toggle("active");
   });
 
-  const navLinks = document.querySelectorAll(".nav-list__item-link"),
-    navSections = document.querySelectorAll(".nav-section");
+  // videos youtube
 
-  window.addEventListener("scroll", () => {
-    let scrollDistance = window.scrollY;
+  function loadVideo() {
+    window.YT.ready(function () {
+      new window.YT.Player("player", {
+        height: "390",
+        width: "640",
+        videoId: "PpjdTwQwWWY",
+        playerVars: { autoplay: 1, controls: 0, showinfo: 0 },
+        events: {
+          onReady: onPlayerReady,
+          onStateChange: onPlayerStateChange,
+        },
+      });
+    });
 
-    navSections.forEach((el, index) => {
-      if (scrollDistance >= el.offsetTop - 250) {
-        navLinks.forEach((elem) => {
-          if (elem.classList.contains("active")) {
-            elem.classList.remove("active");
-          }
-        });
+    function onPlayerReady(event) {
+      event.target.playVideo();
+    }
 
-        navLinks[index].classList.add("active");
-      } else if (scrollDistance < 300) {
-        navLinks[index].classList.remove("active");
-      }
+    function onPlayerStateChange(event) {
+      var videoStatuses = Object.entries(window.YT.PlayerState);
+      console.log(videoStatuses.find((status) => status[1] === event.data)[0]);
+      event.target.playVideo();
+    }
+  }
+
+  $(document).ready(function () {
+    $.getScript("https://www.youtube.com/iframe_api", function () {
+      loadVideo();
     });
   });
-  navLinks[0].classList.add("active");
+
+  // const navLinks = document.querySelectorAll(".nav-list__item-link"),
+  //   navSections = document.querySelectorAll(".nav-section");
+
+  // window.addEventListener("scroll", () => {
+  //   let scrollDistance = window.scrollY;
+
+  //   navSections.forEach((el, index) => {
+  //     if (scrollDistance >= el.offsetTop - 250) {
+  //       navLinks.forEach((elem) => {
+  //         if (elem.classList.contains("active")) {
+  //           elem.classList.remove("active");
+  //         }
+  //       });
+
+  //       navLinks[index].classList.add("active");
+  //     } else if (scrollDistance < 300) {
+  //       navLinks[index].classList.remove("active");
+  //     }
+  //   });
+  // });
+  // navLinks[0].classList.add("active");
 
   // progress bars
 

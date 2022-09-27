@@ -10,7 +10,7 @@
   width: 100%;
   max-width: 107.5rem;
 
-  margin: 0 auto 15rem;
+  margin: 0 auto 8rem;
 
   @include breakpoint($sm-bp) {
     max-width: 33.5rem;
@@ -91,32 +91,59 @@
 }
 
 .team-slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
   box-sizing: border-box;
 
   width: 100%;
   max-width: 42rem;
-  height: 48rem;
-
-  border: 0.3rem solid #ffffff;
+  // height: 48rem;
 
   @include breakpoint($xl-bp) {
     max-width: 35rem;
-    height: 38rem;
+    // height: 38rem;
   }
   @include breakpoint($lg-bp) {
     max-width: 28rem;
-    height: 30rem;
+    // height: 30rem;
   }
   @include breakpoint($sm-bp) {
     max-width: 24rem;
-    height: 29rem;
-
-    border-width: 1.5px;
+    // height: 29rem;
   }
 
   img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+
+    margin-bottom: 1.6rem;
+  }
+}
+
+.team-slide__name {
+  font-weight: 700;
+  font-size: 3rem;
+  line-height: 111.01%;
+  text-align: center;
+  color: #ffb400;
+
+  margin-bottom: 0.8rem;
+
+  @include breakpoint($sm-bp) {
+    font-size: 2rem;
+  }
+}
+
+.team-slide__descr {
+  font-weight: 400;
+  font-size: 1.8rem;
+  color: #d9d9d9;
+  text-align: center;
+
+  @include breakpoint($sm-bp) {
+    font-size: max(12px, 1.2rem);
   }
 }

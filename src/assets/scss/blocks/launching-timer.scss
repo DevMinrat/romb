@@ -15,9 +15,10 @@
 }
 
 .launching-timer__heading {
-  font-weight: 700;
+  font-family: "Russo One";
+  font-weight: 400;
   font-size: 5.2rem;
-  color: $primary;
+  color: #ffb400;
   text-align: center;
 
   margin-bottom: 12rem;
@@ -69,7 +70,7 @@
       font-size: 15rem;
       font-weight: 700;
 
-      padding-left: 4rem;
+      padding-left: 6.5rem;
 
       @include breakpoint($lg-bp) {
         font-size: 9rem;
@@ -91,7 +92,7 @@
       }
 
       @include breakpoint($sm-bp) {
-        margin-right: 2rem;
+        margin-right: 1rem;
       }
     }
   }
@@ -103,21 +104,30 @@
   display: flex;
   align-items: center;
 
+  width: 22.5rem;
+
   font-weight: 700;
   font-size: 15rem;
   line-height: 1.11;
 
+  margin-left: 5rem;
   margin-bottom: 4rem;
 
   @include breakpoint($lg-bp) {
+    width: 15.5rem;
+
     font-size: 11rem;
 
+    margin-left: 3rem;
     margin-bottom: 2rem;
   }
 
   @include breakpoint($sm-bp) {
+    width: 6.5rem;
+
     font-size: 4.8rem;
 
+    margin-left: 1.5rem;
     margin-bottom: 1.5rem;
   }
 }
@@ -137,7 +147,7 @@
   justify-content: space-between;
 
   width: 100%;
-  max-width: 72rem;
+  max-width: 60rem;
 
   margin: 0 auto;
 
@@ -152,18 +162,9 @@
   height: 7.2rem;
 
   @include breakpoint($sm-bp) {
-    max-width: 13rem;
-    height: 3.5rem;
+    max-width: 15rem;
+    height: 4.5rem;
 
     font-size: max(12px, 1.2rem);
-  }
-
-  &.filled-btn {
-    background-color: #f08200;
-    border-color: #f08200;
-
-    &:hover {
-      background-color: transparent;
-    }
   }
 }

@@ -44,8 +44,8 @@
 }
 
 .howWorks-item__num {
-  font-family: "Montserrat";
-  font-weight: 900;
+  font-family: "Russo One";
+  font-weight: 400;
   font-size: 4.2rem;
   line-height: 1.2;
 
@@ -61,7 +61,7 @@
 }
 
 .howWorks-item__heding {
-  font-weight: 700;
+  font-weight: 600;
   font-size: 5.2rem;
   line-height: 1.11;
   color: white;
@@ -93,8 +93,7 @@
   li {
     position: relative;
 
-    font-family: "Open Sans";
-    font-weight: 400;
+    font-weight: 300;
     font-size: max(12px, 2rem);
     color: white;
 
@@ -104,11 +103,6 @@
       font-size: max(12px, 1.2rem);
 
       padding-left: 2.4rem;
-    }
-
-    &:first-child {
-      font-family: "Ubuntu";
-      font-weight: 300;
     }
 
     &::before {
@@ -121,7 +115,7 @@
       width: 1.2rem;
       height: 1.2rem;
 
-      border: 0.15rem solid transparent;
+      border: 2px solid #850200;
       border-radius: 50%;
 
       @include breakpoint($sm-bp) {
@@ -164,16 +158,6 @@
     @include breakpoint($sm-bp) {
       margin-bottom: 0;
     }
-
-    li::before {
-      border-color: #ff1f00;
-    }
-    li:nth-child(even)::before {
-      background-color: transparent;
-    }
-    li:nth-child(odd)::before {
-      background-color: #ff1f00;
-    }
   }
 
   .howWorks-item__img {
@@ -210,18 +194,6 @@
 
     @include breakpoint($xl-bp) {
       max-width: unset;
-    }
-  }
-
-  .howWorks-item__descr {
-    li::before {
-      border-color: #f05600;
-    }
-    li:nth-child(even)::before {
-      background-color: transparent;
-    }
-    li:nth-child(odd)::before {
-      background-color: #f05600;
     }
   }
 
@@ -264,18 +236,6 @@
     }
   }
 
-  .howWorks-item__descr {
-    li::before {
-      border-color: #ffc400;
-    }
-    li:nth-child(even)::before {
-      background-color: transparent;
-    }
-    li:nth-child(odd)::before {
-      background-color: #ffc400;
-    }
-  }
-
   .howWorks-item__img {
     width: 100%;
     max-width: 107.7rem;
@@ -307,18 +267,6 @@
     }
   }
 
-  .howWorks-item__descr {
-    li::before {
-      border-color: #14fe48;
-    }
-    li:nth-child(even)::before {
-      background-color: transparent;
-    }
-    li:nth-child(odd)::before {
-      background-color: #14fe48;
-    }
-  }
-
   .howWorks-item__img {
     width: 100%;
     max-width: 103.8rem;
@@ -338,18 +286,6 @@
 
     @include breakpoint($xl-bp) {
       max-width: unset;
-    }
-  }
-
-  .howWorks-item__descr {
-    li::before {
-      border-color: #68e1fc;
-    }
-    li:nth-child(even)::before {
-      background-color: transparent;
-    }
-    li:nth-child(odd)::before {
-      background-color: #68e1fc;
     }
   }
 

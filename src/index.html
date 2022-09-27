@@ -31,7 +31,7 @@ title: Главная страница
                     <svg class="filled-btn_bg-sm">
                         <use href="#prlm-intro-sm"></use>
                     </svg>
-                    Запишись в whitelist
+                    <span>Запишись в whitelist</span>
                     <span class="flare"></span>
                 </a>
 
@@ -45,7 +45,7 @@ title: Главная страница
                             <svg class="intro-apps__item-icon">
                                 <use href="#apple"></use>
                             </svg>
-                            iOS
+                            <span>iOS</span>
                         </a>
                         <a class="intro-apps__item hollow-btn" href="#">
                             <svg class="hollow-btn_bg">
@@ -54,7 +54,7 @@ title: Главная страница
                             <svg class="intro-apps__item-icon">
                                 <use href="#android"></use>
                             </svg>
-                            Android
+                            <span>Android</span>
                         </a>
                         <a class="intro-apps__item hollow-btn" href="#">
                             <svg class="hollow-btn_bg">
@@ -63,12 +63,9 @@ title: Главная страница
                             <svg class="intro-apps__item-icon">
                                 <use href="#windows"></use>
                             </svg>
-                            Windows
+                            <span>Windows</span>
                         </a>
                     </div>
-                    <svg class="intro__arrow-down">
-                        <use href="#arrow"></use>
-                    </svg>
                 </div>
             </div>
             <div class="intro-wallets">
@@ -98,9 +95,12 @@ title: Главная страница
                     <svg class="hollow-btn_bg">
                         <use href="#prlm-sm"></use>
                     </svg>
-                    Trade Now
+                    <span>Trade Now</span>
                 </a>
             </div>
+            <svg class="intro__arrow-down">
+                <use href="#arrow"></use>
+            </svg>
         </div>
     </div>
 </section>
@@ -108,15 +108,17 @@ title: Главная страница
 <div class="video-main">
     <div class="container">
         <div class="video-main__inner">
+            <div id="player"></div>
             <div class="video-main__slider">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                        <iframe src="https://www.youtube.com/embed/r3pwloKMRwM" title="YouTube video player"
-                            loading="lazy"></iframe>
+
+                        <!-- <iframe src="https://www.youtube.com/embed/r3pwloKMRwM" title="YouTube video player"
+                            loading="lazy" autoplay=1 controls=0></iframe> -->
                     </div>
                     <div class="swiper-slide">
-                        <iframe src="https://www.youtube.com/embed/PpjdTwQwWWY" title="YouTube video player"
-                            loading="lazy"></iframe>
+                        <!-- <iframe src="https://www.youtube.com/embed/PpjdTwQwWWY" title="YouTube video player"
+                            loading="lazy" autoplay=1 showinfo=0 controls=0></iframe> -->
                     </div>
                 </div>
                 <div class="video-main__navs">
@@ -159,7 +161,12 @@ title: Главная страница
                     <p>ROMB стремится стать эпохальной, децентрализованной, управляемой сообществом, удобной для простых
                         пользователей, спортсменов и разработчиков платформой GameFi.</p>
                 </div>
-                <a class="whats-link filled-btn" href="#">Подробнее</a>
+                <a class="whats-link hollow-btn" href="#">
+                    <svg class="hollow-btn_bg">
+                        <use href="#prlm-sm"></use>
+                    </svg>
+                    <span>Подробнее</span>
+                </a>
             </div>
         </div>
     </div>
@@ -594,13 +601,22 @@ title: Главная страница
             <div class="avatar-slider">
                 <div class="swiper-wrapper">
                     <div class="avatar-slider__item swiper-slide">
-                        <img src="" loading="lazy" alt="">
+                        <img src="assets/images/avatar/avatar-img.jpg" loading="lazy" alt="">
+                        <p class="avatar-slider__item-name">Николай Шпаков</p>
+                        <p class="avatar-slider__item-descr">Какие-то регалии спортсмена, поддерживающие несколько строк
+                        </p>
                     </div>
                     <div class="avatar-slider__item swiper-slide">
-                        <img src="" loading="lazy" alt="">
+                        <img src="assets/images/avatar/avatar-img.jpg" loading="lazy" alt="">
+                        <p class="avatar-slider__item-name">Николай Шпаков</p>
+                        <p class="avatar-slider__item-descr">Какие-то регалии спортсмена, поддерживающие несколько строк
+                        </p>
                     </div>
                     <div class="avatar-slider__item swiper-slide">
-                        <img src="" loading="lazy" alt="">
+                        <img src="assets/images/avatar/avatar-img.jpg" loading="lazy" alt="">
+                        <p class="avatar-slider__item-name">Николай Шпаков</p>
+                        <p class="avatar-slider__item-descr">Какие-то регалии спортсмена, поддерживающие несколько строк
+                        </p>
                     </div>
                 </div>
                 <div class="avatar-slider__nav">
@@ -849,6 +865,12 @@ title: Главная страница
                                 </div>
                             </div>
                         </div>
+                        <a class="choose-item__link filled-btn" href="#">
+                            <svg class="filled-btn_bg">
+                                <use href="#prlm-sm"></use>
+                            </svg>
+                            <span>Подробнее</span>
+                        </a>
                     </div>
                     <div class="choose-item swiper-slide ci">
                         <div class="choose-item__img-wrapper">
@@ -918,6 +940,12 @@ title: Главная страница
                                 </div>
                             </div>
                         </div>
+                        <a class="choose-item__link filled-btn" href="#">
+                            <svg class="filled-btn_bg">
+                                <use href="#prlm-sm"></use>
+                            </svg>
+                            <span>Подробнее</span>
+                        </a>
                     </div>
                     <div class="choose-item swiper-slide ci">
                         <div class="choose-item__img-wrapper">
@@ -987,6 +1015,12 @@ title: Главная страница
                                 </div>
                             </div>
                         </div>
+                        <a class="choose-item__link filled-btn" href="#">
+                            <svg class="filled-btn_bg">
+                                <use href="#prlm-sm"></use>
+                            </svg>
+                            <span>Подробнее</span>
+                        </a>
                     </div>
                 </div>
                 <div class="choose-slider__nav">
@@ -1001,6 +1035,33 @@ title: Главная страница
                         </svg>
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="coin">
+    <div class="container">
+        <div class="coin__inner">
+            <h2 class="coin__heading section-heading">Заголовок блока <span>Token pre sale</span>. С возможныит
+                акцентами</h2>
+            <div class="coin-descr">
+                <p> П-с-сс! Маменькин сынок, хочешь узнать секрет? Если ты боишься получить по щам, но хочешь
+                    участвовать в турнире – ты можешь купить свой собственный аватар. Выбирай профессионального бойца.
+                    Он поедет на OFFLINE турнир и будет драться за тебя или твою команду. Ты можешь выбрать бойца из
+                    списка или привезти своего. Да что мы говорим… Ты можешь привезти с собой своего старшего брата или
+                    самого Чака Норриса…</p>
+                <a class="coin__btn filled-btn" href="#">
+                    <svg class="filled-btn_bg">
+                        <use href="#prlm-sm"></use>
+                    </svg>
+                    <span>Подробнее</span>
+                </a>
+            </div>
+
+            <div class="coin-slider">
+                <img class="coin-slider_bg" src="assets/images/coin/coin.png" alt="">
+                <img src="assets/images/coin/coin.png" alt="">
             </div>
         </div>
     </div>
@@ -1075,7 +1136,12 @@ title: Главная страница
                 <div class="price-content__info">
                     <p>Join our Pr-Sale List</p>
                     <p>JPr-Sale Start at 03 July 2018</p>
-                    <a class="price-content__info-link filled-btn" href="#">Нажмите здесь</a>
+                    <a class="price-content__info-link filled-btn" href="#">
+                        <svg class="filled-btn_bg">
+                            <use href="#prlm-sm"></use>
+                        </svg>
+                        <span>Нажмите здесь</span>
+                    </a>
                 </div>
             </div>
         </div>
@@ -1136,8 +1202,18 @@ title: Главная страница
             </div>
         </div>
         <div class="launching-timer__btns">
-            <a class="launching-timer__link filled-btn" href="#">Join Whitelist</a>
-            <a class="launching-timer__link hollow-btn" href="#">More</a>
+            <a class="launching-timer__link filled-btn" href="#">
+                <svg class="filled-btn_bg">
+                    <use href="#prlm-sm"></use>
+                </svg>
+                <span>Join Whitelist</span>
+            </a>
+            <a class="launching-timer__link hollow-btn" href="#">
+                <svg class="hollow-btn_bg">
+                    <use href="#prlm-sm"></use>
+                </svg>
+                <span>More</span>
+            </a>
         </div>
     </div>
 </div>
@@ -1295,19 +1371,29 @@ title: Главная страница
             <div class="team-slider">
                 <div class="swiper-wrapper">
                     <div class="team-slide swiper-slide">
-                        <img src="" alt="">
+                        <img src="assets/images/avatar/avatar-img.jpg" alt="">
+                        <p class="team-slide__name">Николай Шпаков</p>
+                        <p class="team-slide__descr">Исполнительный директор</p>
                     </div>
                     <div class=" team-slide swiper-slide">
-                        <img src="" alt="">
+                        <img src="assets/images/avatar/avatar-img.jpg" alt="">
+                        <p class="team-slide__name">Олег Науменко</p>
+                        <p class="team-slide__descr">СТО</p>
                     </div>
                     <div class="team-slide swiper-slide">
-                        <img src="" alt="">
+                        <img src="assets/images/avatar/avatar-img.jpg" alt="">
+                        <p class="team-slide__name">Ярослав Фомин</p>
+                        <p class="team-slide__descr">Руководитель группы контроля качества</p>
                     </div>
                     <div class="team-slide swiper-slide">
-                        <img src="" alt="">
+                        <img src="assets/images/avatar/avatar-img.jpg" alt="">
+                        <p class="team-slide__name">Николай Шпаков</p>
+                        <p class="team-slide__descr">Исполнительный директор</p>
                     </div>
                     <div class="team-slide swiper-slide">
-                        <img src="" alt="">
+                        <img src="assets/images/avatar/avatar-img.jpg" alt="">
+                        <p class="team-slide__name">Ярослав Фомин</p>
+                        <p class="team-slide__descr">Руководитель группы контроля качества</p>
                     </div>
                 </div>
             </div>

@@ -4,14 +4,15 @@
 
   display: flex;
 
-  height: 100vh;
+  // height: 100vh;
+  min-height: 108rem;
 
   // background-size: cover;
 
   background: #010001;
 
   @include breakpoint($lg-bp) {
-    height: calc(100vh - 4rem);
+    // height: calc(100vh - 4rem);
     padding-top: 6rem;
 
     background: url(../images/intro/intro-bg.png) no-repeat;
@@ -19,9 +20,12 @@
   }
 
   @include breakpoint($sm-bp) {
-    background: none;
+    min-height: unset;
+
+    background: #010001;
 
     padding-top: 5rem;
+    padding-bottom: 2rem;
   }
 }
 
@@ -31,7 +35,8 @@
   left: 0;
   z-index: 1;
   width: 100%;
-  height: 100vh;
+  // height: 100vh;
+  min-height: 108rem;
   object-fit: cover;
 
   @include breakpoint($xl-bp) {
@@ -55,6 +60,7 @@
 
   @include breakpoint($sm-bp) {
     display: block;
+    height: unset;
   }
 }
 
@@ -71,9 +77,6 @@
   @include breakpoint($lg-bp) {
     height: auto;
   }
-  @include breakpoint($sm-bp) {
-    height: 100%;
-  }
 }
 
 .intro__content {
@@ -83,6 +86,10 @@
 
   margin-top: 20rem;
 
+  @include breakpoint($xl-bp) {
+    margin-top: 28rem;
+  }
+
   @include breakpoint($lg-bp) {
     margin-top: 0;
   }
@@ -90,7 +97,6 @@
   @include breakpoint($sm-bp) {
     display: flex;
     flex-direction: column;
-    height: 100%;
   }
 }
 
@@ -185,6 +191,12 @@
     text-transform: none;
   }
 
+  .filled-btn_bg {
+    @include breakpoint($sm-bp) {
+      display: none;
+    }
+  }
+
   &:hover {
     svg {
       fill: none;
@@ -230,16 +242,10 @@
   }
 }
 
-.filled-btn_bg {
-  @include breakpoint($sm-bp) {
-    display: none;
-  }
-}
-
 .filled-btn_bg-sm {
   display: none;
 
-  position: absolute;
+  position: absolute !important;
   left: 0;
   top: 0;
   z-index: -1;
@@ -262,7 +268,7 @@
   }
 
   @include breakpoint($sm-bp) {
-    margin-top: auto;
+    margin-top: 12rem;
     padding-bottom: 2rem;
   }
 }
@@ -306,6 +312,7 @@
   font-size: 2.2rem;
 
   @include breakpoint($sm-bp) {
+    max-width: 13rem;
     height: 4rem;
 
     font-size: max(12px, 1.2rem);
@@ -319,6 +326,8 @@
 }
 
 .intro-apps__item-icon {
+  position: relative;
+
   width: 3.2rem;
   height: 3.2rem;
 
@@ -342,6 +351,8 @@
 
   stroke: white;
 
+  margin-top: 4rem;
+
   transform: rotate(-90deg);
 
   @include breakpoint($lg-bp) {
@@ -364,6 +375,20 @@
   display: flex;
   align-items: center;
   gap: 6.4rem;
+
+  margin-top: 5rem;
+
+  @include breakpoint($xl-bp) {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2.5rem;
+  }
+
+  @include breakpoint($sm-bp) {
+    gap: 1.5rem;
+
+    margin-top: 0;
+  }
 }
 
 .intro-wallets__item {
@@ -371,28 +396,49 @@
   align-items: center;
   gap: 0.8rem;
 
+  @include breakpoint($sm-bp) {
+    flex-wrap: wrap;
+  }
+
   .romb-icon {
     width: 2rem;
     height: 2.4rem;
 
     fill: #ffb400;
+
+    @include breakpoint($sm-bp) {
+      width: 1rem;
+      height: 1.2rem;
+    }
   }
 
   & p:nth-child(2) {
     font-weight: 700;
     font-size: 2rem;
     color: #d9d9d9;
+
+    @include breakpoint($sm-bp) {
+      font-size: max(12px, 1.2rem);
+    }
   }
   & p:nth-child(3) {
     font-weight: 700;
     font-size: 2rem;
     color: #5f4137;
+
+    @include breakpoint($sm-bp) {
+      font-size: max(12px, 1.2rem);
+    }
   }
   & p:nth-child(4) {
     font-size: 1.8rem;
     letter-spacing: 0.02em;
     color: #d9d9d9;
     opacity: 0.6;
+
+    @include breakpoint($sm-bp) {
+      font-size: max(12px, 1.2rem);
+    }
   }
 
   .copy-icon {

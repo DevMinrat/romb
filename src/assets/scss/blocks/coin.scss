@@ -1,0 +1,110 @@
+.coin {
+  padding: 32.5rem 0;
+
+  background: url(../images/coin/coin-bg.png) no-repeat;
+  background-size: cover;
+
+  @include breakpoint($xl-bp) {
+    padding: 15rem 0;
+  }
+  @include breakpoint($lg-bp) {
+    padding: 10rem 0;
+  }
+}
+
+.coin__inner {
+  display: grid;
+  grid-template-areas:
+    "ch cs"
+    "cd cs";
+  grid-template-columns: repeat(2, 86.5rem);
+  gap: 6.4rem 1rem;
+
+  @include breakpoint($xl-bp) {
+    grid-template-columns: repeat(2, 70rem);
+  }
+
+  @include breakpoint($lg-bp) {
+    grid-template-columns: 1fr;
+
+    grid-template-areas:
+      "ch"
+      "cs"
+      "cd";
+
+    gap: 6rem;
+  }
+
+  @include breakpoint($sm-bp) {
+    gap: 4rem;
+  }
+}
+
+.coin__heading {
+  grid-area: ch;
+
+  margin-top: 4rem;
+
+  @include breakpoint($sm-bp) {
+    font-size: 2.8rem;
+
+    margin-top: 0;
+  }
+}
+
+.coin-descr {
+  grid-area: cd;
+
+  font-size: 2.4rem;
+  line-height: 1.3;
+
+  @include breakpoint($lg-bp) {
+    font-size: 2rem;
+  }
+
+  @include breakpoint($sm-bp) {
+    font-size: max(12px, 1.4rem);
+  }
+}
+
+.coin__btn {
+  width: 100%;
+  max-width: 26rem;
+  height: 6.4rem;
+
+  margin-top: 6.4rem;
+
+  @include breakpoint($sm-bp) {
+    max-width: 16rem;
+    height: 5.4rem;
+
+    margin-top: 4rem;
+  }
+}
+
+.coin-slider {
+  grid-area: cs;
+
+  position: relative;
+
+  width: 100%;
+  max-width: 86.3rem;
+
+  img {
+    width: 100%;
+  }
+}
+
+.coin-slider_bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+
+  width: 100%;
+
+  background: url(../images/coin/coin.png) no-repeat;
+  background-size: cover;
+
+  filter: blur(25px);
+}

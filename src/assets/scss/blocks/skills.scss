@@ -37,7 +37,7 @@
 }
 
 .skills__heading {
-  margin-bottom: 6rem;
+  margin-bottom: 3rem;
 
   @include breakpoint($sm-bp) {
     font-size: 2.8rem;
@@ -58,7 +58,7 @@
 }
 
 .skills-conent__descr {
-  font-size: 2.6rem;
+  font-size: 2.4rem;
 
   @include breakpoint($sm-bp) {
     font-size: max(12px, 1.2rem);
@@ -140,7 +140,7 @@
   font-weight: 700;
   font-size: 3.6rem;
   line-height: 1.11;
-  color: $primary;
+  color: #FFB400;
 
   @include breakpoint($sm-bp) {
     font-size: 2.2rem;

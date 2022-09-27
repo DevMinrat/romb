@@ -61,7 +61,7 @@
 
 .price-tokens__item {
   width: 100%;
-  max-width: 21rem;
+  max-width: 22.4rem;
 
   padding: 2rem;
   border: 0.1rem solid #ffffff;
@@ -160,7 +160,7 @@
 
 .price-cards__item-price {
   font-weight: 500;
-  font-size: 5rem;
+  font-size: 4rem;
   color: #ffc400;
 
   padding-left: 3rem;
@@ -168,7 +168,7 @@
   border-left: 0.1rem solid #ffc400;
 
   @include breakpoint($sm-bp) {
-    font-size: 3.8rem;
+    font-size: 3rem;
   }
 }
 
@@ -222,7 +222,7 @@
   }
 
   p {
-    font-size: 2.6rem;
+    font-size: 2.4rem;
 
     @include breakpoint($sm-bp) {
       font-size: 1.6rem;
@@ -264,9 +264,24 @@
   @include breakpoint($sm-bp) {
     margin-top: 2rem;
 
-    max-width: 12.7rem;
-    height: 3.4rem;
+    max-width: 15rem;
+    height: 4.4rem;
 
     font-size: max(12px, 1.2rem);
+
+    color: $primary;
+
+    .filled-btn_bg {
+      fill: transparent;
+      stroke: $primary;
+    }
+
+    &:hover {
+      color: white;
+
+      .filled-btn_bg {
+        fill: $primary;
+      }
+    }
   }
 }

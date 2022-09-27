@@ -116,6 +116,10 @@
 
   padding: 0 2rem;
 
+  @include breakpoint($xl-bp) {
+    min-width: 10rem;
+  }
+
   & + & {
     margin-left: 1rem;
 
@@ -126,7 +130,18 @@
   }
 
   & .hollow-btn_bg {
-    display: none;
+    z-index: -1;
+    opacity: 0;
+  }
+
+  &:hover {
+    .nav-list__item-link {
+      color: #ff8a00;
+    }
+
+    .hollow-btn_bg {
+      opacity: 1;
+    }
   }
 }
 
@@ -136,20 +151,8 @@
   line-height: 1.1;
   color: white;
 
-  &.active {
-    color: #ff8a00;
-
-    & + .hollow-btn_bg {
-      display: block;
-    }
-  }
-
   @include breakpoint($sm-bp) {
     font-size: 1.8rem;
-  }
-
-  &:hover {
-    color: #ff8a00;
   }
 }
 

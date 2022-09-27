@@ -6,6 +6,7 @@
   align-items: center;
 
   color: white;
+  font-weight: 500;
 
   background: none;
   border: none;
@@ -21,11 +22,16 @@
     }
   }
 
+  & *:not(.hollow-btn_bg) {
+    position: relative;
+    z-index: 2;
+  }
+
   .filled-btn_bg {
     position: absolute;
     left: 0;
     top: 0;
-    z-index: -1;
+    z-index: 1;
 
     width: 100%;
     height: 100%;

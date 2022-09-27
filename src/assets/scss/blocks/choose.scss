@@ -39,7 +39,7 @@
   width: 100%;
   max-width: 84.3rem;
 
-  font-size: 2.6rem;
+  font-size: 2.4rem;
 
   @include breakpoint($sm-bp) {
     font-size: max(12px, 1.4rem);
@@ -62,11 +62,12 @@
   display: grid;
   grid-template-areas:
     "ciimage ciheader"
-    "ciimage ciinfo";
+    "ciimage ciinfo"
+    "ciimage cilink";
 
   align-items: flex-start;
   grid-template-columns: 92.5rem 45rem;
-  gap: 10rem 12rem;
+  gap: 0 12rem;
 
   @include breakpoint($xl-bp) {
     grid-template-columns: 60rem 45rem;
@@ -74,10 +75,11 @@
   }
   @include breakpoint($lg-bp) {
     grid-template-areas:
-      "ciheader"
-      "ciimage"
-      "ciinfo";
-    grid-template-columns: 1fr;
+      "ciheader ciheader"
+      "ciimage ciinfo"
+      "cilink cilink";
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem 1.6rem;
   }
 }
 
@@ -92,8 +94,12 @@
 
   width: 100%;
 
-  @include breakpoint($sm-bp) {
+  @include breakpoint($lg-bp) {
+    height: 100%;
     padding: 1rem;
+  }
+  @include breakpoint($sm-bp) {
+    padding: 0.4rem;
   }
 
   .choose-item__img {
@@ -134,7 +140,7 @@
   margin-top: 3.5rem;
 
   @include breakpoint($sm-bp) {
-    margin-top: 3rem;
+    margin-top: 2rem;
   }
 }
 
@@ -147,6 +153,9 @@
   @include breakpoint($sm-bp) {
     margin-bottom: 2rem;
   }
+  @include breakpoint($sm-bp) {
+    margin-bottom: 1.3rem;
+  }
 }
 
 .ci-data__descr {
@@ -158,14 +167,31 @@
 }
 
 .ci-data__item-prop {
-  font-weight: 700;
+  font-weight: 600;
   line-height: 1.11;
   margin-right: 0.6rem;
+
+  @include breakpoint($lg-bp) {
+    color: #d9d9d9;
+    font-weight: 400;
+  }
+
+  @include breakpoint($sm-bp) {
+    font-size: max(12px, 1.2rem);
+  }
 }
 .ci-data__item-value {
   font-weight: 700;
   line-height: 1.11;
-  color: $primary;
+  color: #ffb400;
+
+  @include breakpoint($lg-bp) {
+    font-weight: 400;
+  }
+
+  @include breakpoint($sm-bp) {
+    font-size: max(12px, 1.2rem);
+  }
 }
 
 .ci-data__item-progress {
@@ -178,6 +204,7 @@
 
   @include breakpoint($lg-bp) {
     width: 100%;
+    background: rgba(217, 217, 217, 0.4);
   }
 
   @include breakpoint($sm-bp) {
@@ -216,6 +243,43 @@
         right: -0.8rem;
       }
     }
+  }
+}
+
+.choose-item__link {
+  grid-area: cilink;
+
+  width: 100%;
+  max-width: 22rem;
+  height: 6.4rem;
+
+  font-weight: 500;
+
+  margin-top: 6.4rem;
+
+  @include breakpoint($lg-bp) {
+    margin-top: 0;
+    margin: 0 auto;
+
+    color: $primary;
+
+    .filled-btn_bg {
+      fill: transparent;
+      stroke: $primary;
+    }
+
+    &:hover {
+      color: white;
+
+      .filled-btn_bg {
+        fill: $primary;
+      }
+    }
+  }
+
+  @include breakpoint($sm-bp) {
+    max-width: 16rem;
+    height: 5rem;
   }
 }
 

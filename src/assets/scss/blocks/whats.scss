@@ -48,12 +48,14 @@
 }
 
 .whats__heading {
-  font-weight: 700;
+  font-family: 'Russo One';
+  font-weight: 400;
   font-size: 6rem;
   line-height: 1.29;
   letter-spacing: -0.035em;
 
   margin-bottom: 9rem;
+  
 
   span {
     color: #ff8a00;
@@ -85,9 +87,7 @@
 
   font-weight: 500;
   font-size: 2.2rem;
-
-  background: #f08200;
-  border-color: #f08200;
+  color: #ff8a00;
 
   @include breakpoint($sm-bp) {
     max-width: 12.7rem;
