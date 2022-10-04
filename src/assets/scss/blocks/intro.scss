@@ -31,7 +31,7 @@
 
 .intro .video-bg {
   position: absolute;
-  top: 10rem;
+  top: 0;
   left: 0;
   z-index: 1;
   width: 100%;
@@ -84,11 +84,7 @@
   max-width: 108rem;
   z-index: 6;
 
-  margin-top: 20rem;
-
-  @include breakpoint($xl-bp) {
-    margin-top: 28rem;
-  }
+  margin-top: 5rem;
 
   @include breakpoint($lg-bp) {
     margin-top: 0;
@@ -261,7 +257,7 @@
 }
 
 .intro-apps {
-  margin-top: 12rem;
+  margin-top: 8rem;
 
   @include breakpoint($lg-bp) {
     margin-top: 15rem;

@@ -10,6 +10,11 @@ document.addEventListener("DOMContentLoaded", () => {
   //= components/scroll-lock.js
   //= components/heroes.js
 
+  AOS.init({
+    duration: 600,
+    offset: 20,
+  });
+
   const header = document.querySelector(".header");
   const hmBtn = document.querySelector(".burger-menu");
   const headerContent = document.querySelector(".header__content");
@@ -45,37 +50,39 @@ document.addEventListener("DOMContentLoaded", () => {
     headerContent.classList.toggle("active");
   });
 
-  // videos youtube
+  //videos
 
-  function loadVideo() {
-    window.YT.ready(function () {
-      new window.YT.Player("player", {
-        height: "390",
-        width: "640",
-        videoId: "PpjdTwQwWWY",
-        playerVars: { autoplay: 1, controls: 0, showinfo: 0 },
-        events: {
-          onReady: onPlayerReady,
-          onStateChange: onPlayerStateChange,
-        },
-      });
-    });
+  const firstVideo = document.querySelector("#video-main-first");
 
-    function onPlayerReady(event) {
-      event.target.playVideo();
-    }
+  var firstVideoShow = false;
 
-    function onPlayerStateChange(event) {
-      var videoStatuses = Object.entries(window.YT.PlayerState);
-      console.log(videoStatuses.find((status) => status[1] === event.data)[0]);
-      event.target.playVideo();
+  function is_fully_shown(target) {
+    var wt = $(window).scrollTop();
+    var wh = $(window).height();
+    var eh = $(target).height();
+    var et = $(target).offset().top;
+
+    if (et >= wt && et + eh <= wh + wt) {
+      return true;
+    } else {
+      return false;
     }
   }
 
+  $(window).scroll(function () {
+    if (is_fully_shown("#video-main-first")) {
+      console.log(true);
+      firstVideo.muted = true;
+      firstVideo.play();
+    }
+  });
+
   $(document).ready(function () {
-    $.getScript("https://www.youtube.com/iframe_api", function () {
-      loadVideo();
-    });
+    if (is_fully_shown("#video-main-first")) {
+      console.log(true);
+      firstVideo.muted = true;
+      firstVideo.play();
+    }
   });
 
   // const navLinks = document.querySelectorAll(".nav-list__item-link"),
