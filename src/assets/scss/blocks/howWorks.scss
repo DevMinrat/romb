@@ -204,6 +204,8 @@
 }
 
 .hwi-third {
+  position: relative;
+
   margin-left: 15rem;
   margin-bottom: 9rem;
 
@@ -220,7 +222,7 @@
 
   .howWorks-item__content {
     width: 100%;
-    max-width: 88.3rem;
+    max-width: 70.3rem;
 
     @include breakpoint($xl-bp) {
       max-width: unset;
@@ -239,6 +241,43 @@
   .howWorks-item__img {
     width: 100%;
     max-width: 107.7rem;
+  }
+
+  .howWorks-item__img-wrapper {
+    position: relative;
+
+    width: 100%;
+    max-width: 107.7rem;
+  }
+
+  .hwi-third__gif {
+    position: absolute;
+    right: 35rem;
+    top: 27rem;
+    z-index: 2;
+
+    width: 100%;
+    max-width: 64rem;
+
+    @include breakpoint($xl-bp) {
+      top: unset;
+      bottom: 17rem;
+      right: 50rem;
+    }
+
+    @include breakpoint($lg-bp) {
+      max-width: 30rem;
+
+      bottom: 16rem;
+      right: 45rem;
+    }
+
+    @include breakpoint($sm-bp) {
+      max-width: 15rem;
+
+      bottom: 6rem;
+      right: 18rem;
+    }
   }
 }
 
@@ -292,6 +331,37 @@
 
     @include breakpoint($xl-bp) {
       max-width: unset;
+    }
+  }
+
+  .hwi-fifth__gif {
+    position: absolute;
+    right: 38rem;
+    top: 8rem;
+    z-index: 2;
+
+    width: 20rem;
+    height: 20rem;
+
+    @include breakpoint($xl-bp) {
+      top: unset;
+      bottom: 43rem;
+      right: 60rem;
+    }
+
+    @include breakpoint($lg-bp) {
+      width: 10rem;
+      height: 10rem;
+
+      bottom: 32rem;
+      right: 35rem;
+    }
+
+    @include breakpoint($sm-bp) {
+      width: 5rem;
+      height: 5rem;
+      bottom: 13rem;
+      right: 15rem;
     }
   }
 

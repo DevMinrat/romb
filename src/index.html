@@ -227,7 +227,10 @@ title: Главная страница
                         </li>
                     </ul>
                 </div>
-                <img class="howWorks-item__img" src="assets/images/howWorks/item-3.png" alt="" data-aos="fade-left">
+                <div class="howWorks-item__img-wrapper">
+                    <img class="hwi-third__gif" src="assets/images/howWorks/boom-gif.gif" alt="">
+                    <img class="howWorks-item__img" src="assets/images/howWorks/item-3.png" alt="" data-aos="fade-left">
+                </div>
             </div>
             <div class="howWorks-item hwi-fourth">
                 <img class="howWorks-item__img" src="assets/images/howWorks/item-4.png" alt="" data-aos="fade-right">
@@ -259,6 +262,7 @@ title: Главная страница
                             reliable.</li>
                     </ul>
                 </div>
+                <img class="hwi-fifth__gif" src="assets/images/howWorks/prize-gif.gif" alt="">
                 <img class="howWorks-item__img" src="assets/images/howWorks/item-5.png" alt="" data-aos="fade-left">
             </div>
         </div>
@@ -1044,8 +1048,16 @@ title: Главная страница
             </div>
 
             <div class="coin-slider" data-aos="fade-left">
-                <img class="coin-slider_bg" src="assets/images/coin/coin.png" alt="">
-                <img src="assets/images/coin/coin.png" alt="">
+                <div class="coin__slider-wrapper">
+                    <img class="coin-slider_bg" src="assets/images/coin/coin.png" alt="">
+                    <img class="coin-slider_gif" src="assets/images/coin/coin-bg.gif" alt="">
+                    <div class="threesixty coin-360">
+                        <div class="spinner">
+                            <span>0%</span>
+                        </div>
+                        <ol class="threesixty_images"></ol>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -1291,56 +1303,96 @@ title: Главная страница
                 постоянно развиваемся для
                 достижения этих целей.</p>
         </div>
-        <div class="roadmap__inner">
-            <div class="roadmap-item done">
-                <div class="roadmap-item__point-wrapper">
-                    <div class="roadmap-item__point">
-                        <svg>
-                            <use href="#check"></use>
-                        </svg>
+        <div class="roadmap__inner roadmap-slider">
+            <div class="swiper-wrapper">
+                <div class="roadmap-item swiper-slide done">
+                    <div class="roadmap-item__point-wrapper">
+                        <div class="roadmap-item__point">
+                            <svg>
+                                <use href="#check"></use>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="roadmap-item__content">
+                        <div class="roadmap-item__triangle"></div>
+                        <p class="roadmap-item__date">February, 2022</p>
+                        <p class="roadmap-item__name">Major technical improvements and bug fixes</p>
+                        <p class="roadmap-item__descr">The team will fix all the current bugs and will make UI/UX
+                            changes,
+                            as
+                            well as improvements of the site functionality.</p>
                     </div>
                 </div>
-                <div class="roadmap-item__content" data-aos="fade-left">
-                    <div class="roadmap-item__triangle"></div>
-                    <p class="roadmap-item__date">February, 2022</p>
-                    <p class="roadmap-item__name">Major technical improvements and bug fixes</p>
-                    <p class="roadmap-item__descr">The team will fix all the current bugs and will make UI/UX changes,
-                        as
-                        well as improvements of the site functionality.</p>
-                </div>
-            </div>
-            <div class="roadmap-item done">
-                <div class="roadmap-item__point-wrapper">
-                    <div class="roadmap-item__point">
-                        <svg>
-                            <use href="#check"></use>
-                        </svg>
+                <div class="roadmap-item swiper-slide done">
+                    <div class="roadmap-item__point-wrapper">
+                        <div class="roadmap-item__point">
+                            <svg>
+                                <use href="#check"></use>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="roadmap-item__content">
+                        <div class="roadmap-item__triangle"></div>
+                        <p class="roadmap-item__date">April, 24th 2022</p>
+                        <p class="roadmap-item__name">Major technical improvements and bug fixes</p>
+                        <p class="roadmap-item__descr">The team will fix all the current bugs and will make UI/UX
+                            changes,
+                            as
+                            well as improvements of the site functionality.</p>
                     </div>
                 </div>
-                <div class="roadmap-item__content" data-aos="fade-left">
-                    <div class="roadmap-item__triangle"></div>
-                    <p class="roadmap-item__date">April, 24th 2022</p>
-                    <p class="roadmap-item__name">Major technical improvements and bug fixes</p>
-                    <p class="roadmap-item__descr">The team will fix all the current bugs and will make UI/UX changes,
-                        as
-                        well as improvements of the site functionality.</p>
-                </div>
-            </div>
-            <div class="roadmap-item inprogress">
-                <div class="roadmap-item__point-wrapper">
-                    <div class="roadmap-item__point">
-                        <svg>
-                            <use href="#calendar"></use>
-                        </svg>
+                <div class="roadmap-item swiper-slide done">
+                    <div class="roadmap-item__point-wrapper">
+                        <div class="roadmap-item__point">
+                            <svg>
+                                <use href="#check"></use>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="roadmap-item__content">
+                        <div class="roadmap-item__triangle"></div>
+                        <p class="roadmap-item__date">April, 24th 2022</p>
+                        <p class="roadmap-item__name">Major technical improvements and bug fixes</p>
+                        <p class="roadmap-item__descr">The team will fix all the current bugs and will make UI/UX
+                            changes,
+                            as
+                            well as improvements of the site functionality.</p>
                     </div>
                 </div>
-                <div class="roadmap-item__content" data-aos="fade-left">
-                    <div class="roadmap-item__triangle"></div>
-                    <p class="roadmap-item__date">May, 2022</p>
-                    <p class="roadmap-item__name">Lorem ipsum dolor sit amet</p>
-                    <p class="roadmap-item__descr">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto,
-                        optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis
-                        unde? Iste voluptatibus minus veritatis qui ut</p>
+                <div class="roadmap-item swiper-slide done">
+                    <div class="roadmap-item__point-wrapper">
+                        <div class="roadmap-item__point">
+                            <svg>
+                                <use href="#check"></use>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="roadmap-item__content">
+                        <div class="roadmap-item__triangle"></div>
+                        <p class="roadmap-item__date">April, 24th 2022</p>
+                        <p class="roadmap-item__name">Major technical improvements and bug fixes</p>
+                        <p class="roadmap-item__descr">The team will fix all the current bugs and will make UI/UX
+                            changes,
+                            as
+                            well as improvements of the site functionality.</p>
+                    </div>
+                </div>
+                <div class="roadmap-item swiper-slide inprogress">
+                    <div class="roadmap-item__point-wrapper">
+                        <div class="roadmap-item__point">
+                            <svg>
+                                <use href="#calendar"></use>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="roadmap-item__content">
+                        <div class="roadmap-item__triangle"></div>
+                        <p class="roadmap-item__date">May, 2022</p>
+                        <p class="roadmap-item__name">Lorem ipsum dolor sit amet</p>
+                        <p class="roadmap-item__descr">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto,
+                            optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis
+                            unde? Iste voluptatibus minus veritatis qui ut</p>
+                    </div>
                 </div>
             </div>
         </div>

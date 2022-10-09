@@ -172,4 +172,21 @@ $(window).on("load", function () {
       responsive: true,
     });
   }
+  if (document.querySelector(".coin__slider-wrapper")) {
+    var three60Coin = $(".coin-360").ThreeSixty({
+      totalFrames: 36,
+      endFrame: 36,
+      currentFrame: 1,
+      imgList: ".threesixty_images",
+      progress: ".spinner",
+      imagePath: "assets/images/coin/coin-360/",
+      filePrefix: "00",
+      ext: ".png",
+      height: 550,
+      width: 550,
+      navigation: false,
+      disableSpin: false,
+      responsive: true,
+    });
+  }
 });

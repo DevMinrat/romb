@@ -58,88 +58,45 @@
 
 .roadmap-item {
   display: flex;
+  flex-direction: column;
   align-items: flex-start;
 
   position: relative;
 
+  width: 100%;
+  max-width: 52.4rem;
+
   &:not(:last-child):before {
     content: "";
     position: absolute;
-    left: 5.65rem;
-    top: 0;
+    left: 17.7rem;
+    top: 7.3rem;
     z-index: 4;
 
-    height: 100%;
-    width: 0.3rem;
+    height: 0.3rem;
+    width: 36rem;
 
     background-color: #9df656;
 
     @include breakpoint($sm-bp) {
-      left: 2.5rem;
+      left: 6rem;
+      top: 3.5rem;
+      width: 29.8rem;
     }
   }
 
   &:nth-last-child(2)::before {
-    height: 26rem;
-    top: 0;
+    height: 0.3rem;
+    width: 36rem;
+
+    top: 7.3rem;
     z-index: 3;
-    background-color: #9df656;
-
-    @include breakpoint($sm-bp) {
-      height: 10rem;
-    }
-  }
-  &:first-child:before {
-    top: 0;
-    z-index: 2;
-    background-color: #9df656;
-  }
-  &:nth-last-child(2)::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 5.65rem;
-    z-index: 2;
-
-    height: 100%;
-    width: 0.3rem;
-
     background-color: #eebf26;
 
     @include breakpoint($sm-bp) {
-      left: 2.5rem;
-    }
-  }
-
-  &:last-child:before {
-    content: "";
-    position: absolute;
-    left: 5.65rem;
-    top: 0rem;
-
-    height: 26rem;
-    width: 0.3rem;
-
-    background-color: #eebf26;
-
-    @include breakpoint($lg-bp) {
-      height: 15rem;
-    }
-
-    @include breakpoint($sm-bp) {
-      left: 2.5rem;
-      height: 10rem;
-    }
-  }
-
-  & + & {
-    padding-top: 26rem;
-
-    @include breakpoint($lg-bp) {
-      padding-top: 15rem;
-    }
-    @include breakpoint($sm-bp) {
-      padding-top: 6.5rem;
+      left: 6rem;
+      top: 3.5rem;
+      width: 29.8rem;
     }
   }
 
@@ -218,16 +175,15 @@
   z-index: 5;
 
   padding: 1.8rem 0;
-  margin-right: 7.4rem;
+  margin-bottom: 4rem;
 
-  background: #141415;
   border-radius: 50%;
 
   @include breakpoint($sm-bp) {
     max-width: 5.3rem;
 
     padding: 1rem 0;
-    margin-right: 2.3rem;
+    margin-bottom: 2.3rem;
   }
 }
 
@@ -255,8 +211,10 @@
 .roadmap-item__content {
   position: relative;
 
+  box-sizing: border-box;
+
   width: 100%;
-  max-width: 52.5rem;
+  max-width: 52.4rem;
 
   color: #000;
 
@@ -295,12 +253,10 @@
   font-size: 2.6rem;
   line-height: 1.11;
 
-  margin-bottom: 4rem;
+  margin-bottom: 1.6rem;
 
   @include breakpoint($sm-bp) {
     font-size: max(12px, 1.2rem);
-
-    margin-bottom: 1.8rem;
   }
 }
 
@@ -314,20 +270,23 @@
 
 .roadmap-item__triangle {
   position: absolute;
-  top: 5.65rem;
-  left: -2.4rem;
+  top: -4rem;
+  left: 3.5rem;
 
   width: 0;
   height: 0;
   border-top: 2rem solid transparent;
-  border-right: 2.5rem solid #eeeeee;
-  border-bottom: 2rem solid transparent;
+  border-left: 2rem solid transparent;
+  border-right: 2rem solid transparent;
+  border-bottom: 2rem solid #eeeeee;
 
   @include breakpoint($sm-bp) {
-    top: 2.25rem;
-    left: -1.8rem;
+    top: -3rem;
+    left: 1.5rem;
+
     border-top: 1.5rem solid transparent;
-    border-right: 2rem solid #eeeeee;
-    border-bottom: 1.5rem solid transparent;
+    border-left: 1.5rem solid transparent;
+    border-right: 1.5rem solid transparent;
+    border-bottom: 1.5rem solid #eeeeee;
   }
 }

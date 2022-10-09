@@ -17,7 +17,7 @@
   grid-template-areas:
     "ch cs"
     "cd cs";
-  grid-template-columns: repeat(2, 86.5rem);
+  grid-template-columns: 1fr 1fr;
   gap: 6.4rem 1rem;
 
   @include breakpoint($xl-bp) {
@@ -85,26 +85,73 @@
 .coin-slider {
   grid-area: cs;
 
+  justify-self: center;
+
   position: relative;
 
   width: 100%;
-  max-width: 86.3rem;
+  max-width: 72rem;
+  height: 55rem;
+
+  @include breakpoint($lg-bp) {
+    height: 60rem;
+  }
+
+  @include breakpoint($sm-bp) {
+    height: 37rem;
+  }
 
   img {
     width: 100%;
   }
+
+  & .threesixty {
+    z-index: 3;
+
+    display: flex;
+    justify-content: center;
+  }
+
+  .threesixty .threesixty_images {
+    width: 100%;
+    max-width: 55rem;
+  }
+
+  & .threesixty_images img {
+    width: 100%;
+    max-width: 55rem;
+  }
+}
+
+.coin__slider-wrapper {
+  display: flex;
+  justify-content: center;
+
+  position: relative;
 }
 
 .coin-slider_bg {
   position: absolute;
-  left: 0;
-  top: 0;
-  z-index: -1;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
 
   width: 100%;
-
-  background: url(../images/coin/coin.png) no-repeat;
-  background-size: cover;
+  max-width: 55rem;
 
   filter: blur(25px);
+}
+
+.coin-slider_gif {
+  position: absolute;
+  left: 47.5%;
+  top: 52%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+
+  width: 100%;
+  max-width: 81.5rem;
+
+  opacity: 0.2;
 }

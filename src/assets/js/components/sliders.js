@@ -82,3 +82,23 @@ let teamSlider = new Swiper(".team-slider", {
     },
   },
 });
+
+let roadmapSlider = new Swiper(".roadmap-slider", {
+  slidesPerView: "auto",
+  spaceBetween: 80,
+
+  breakpoints: {
+    320: {
+      spaceBetween: 30,
+    },
+    921: {
+      spaceBetween: 50,
+    },
+    1111: {
+      spaceBetween: 70,
+    },
+    1581: {
+      spaceBetween: 80,
+    },
+  },
+});
